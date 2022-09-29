@@ -1811,7 +1811,7 @@ let sections = []
 }
   break
 
-case 'allmenu2': case 'voicemenu' case 'needhelp' case 'buybot' case 'credit'
+case 'allmenu2': case 'voicemenu': case 'needhelp': case 'buybot': case 'credit':
     if(isCmd){
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
