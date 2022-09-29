@@ -1819,7 +1819,7 @@ case 'allmenu2': case 'voicemenu': case 'needhelp': case 'buybot': case 'credit'
       mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
     
         
- const txt = `*Coming Soon 🕘*`
+ const txt = `⚠️\n\n*Coming Soon 🕘*`
      
          let butRun = [
                 {buttonId: `-owner`, buttonText: {displayText: '❤️ 𝘖𝘸𝘯𝘦𝘳 ❤️'}, type: 1},
@@ -1951,7 +1951,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 										{
 										"title": "ᵃⁿʸᵃ⃟😼 𝗖𝗼𝗻𝘃𝗲𝗿𝘁 𝗺𝗲𝗻𝘂",
 										"description": "Display the list of converting features",
-										"rowId": `${prefix}convertmenu`
+										"rowId": `${prefix}convertermenu`
 									},
 									{
 										"title": "ᵃⁿʸᵃ⃟🔊 𝗔𝘂𝗱𝗶𝗼 𝗺𝗲𝗻𝘂",
@@ -1976,12 +1976,12 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 									{
 										"title": "ᵃⁿʸᵃ⃟🎃 𝗧𝗲𝘅𝘁𝗺𝗮𝗸𝗲𝗿 𝗺𝗲𝗻𝘂",
 										"description": "Display the list of textmaker features",
-										"rowId": `${prefix}textpromenu`
+										"rowId": `${prefix}textmakermenu`
 									},
 									{
 										"title": "ᵃⁿʸᵃ⃟👻 𝗥𝗲𝗮𝗰𝘁𝗶𝗼𝗻 𝗺𝗲𝗻𝘂",
 										"description": "Display the list of reactions features",
-										"rowId": `${prefix}reactionmenu`
+										"rowId": `${prefix}reactionmenu2`
 									},
 										{
 											"title": "ᵃⁿʸᵃ⃟🌺 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻 𝗺𝗲𝗻𝘂",
