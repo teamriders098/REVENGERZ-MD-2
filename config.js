@@ -14,7 +14,7 @@ global.BotName = "Anya❤️"
 global.packname = "Anya bot"
 global.author = "By: Pika❤️"
 global.OwnerName = "3.69_pika"
-global.BotSourceCode = "https://github.com/Pika4O4/Anya-pika"
+global.BotSourceCode = "*⚠️ This Bot is premium... means you have to buy this bot from the owner to own it ❤️*"
 global.SupportGroupLink = "https://chat.whatsapp.com/H6CUtq40oRDKIofIEbf1qEl"
 global.sessionName = "session"
 
