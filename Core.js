@@ -1507,6 +1507,7 @@ switch(command) {
 case 'me': case 'profile': case 'myprofile':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
+  Miku.sendMessage(from, { react: { text: `${global.reactmoji23}`, key: m.key }})
   if (!isDarah){ addInventoriDarah(m.sender, DarahAwal) }
   if (!isInventory){ addInventori(m.sender) }
   if (!isInventoriBuruan){ addInventoriBuruan(m.sender) }
@@ -1810,17 +1811,42 @@ let sections = []
 }
   break
 
+case 'allmenu2': case 'voicemenu' case 'needhelp' case 'buybot' case 'credit'
+    if(isCmd){
+    if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+
+      mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
+    
+        
+ const txt = `*Coming Soon 🕘*`
+     
+         let butRun = [
+                {buttonId: `-owner`, buttonText: {displayText: '❤️ 𝘖𝘸𝘯𝘦𝘳 ❤️'}, type: 1},
+                {buttonId: `-allmenu`, buttonText: {displayText: '𝘔𝘦𝘯𝘶 𝘭𝘪𝘴𝘵 🎃'}, type: 1},      
+                {buttonId: `-menu`, buttonText: {displayText: '🍓 𝘔𝘦𝘯𝘶 🍓'}, type: 1}
+                ]
+                let buttonMessage = {
+                    video:fs.readFileSync('./system/Congo.mp4'),gifPlayback:true,
+                    caption: txt,
+                    footer: `${global.BotName}`,
+                    buttons: butRun,
+                    headerType: 4
+                }
+            Miku.sendMessage(m.chat,buttonMessage,{quoted:m})
+                }
+break
 
   case 'grupsetting':
             case 'groupsettings':{
             	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
                     let sections = []
-                    let com = [`group open`,`antilinkall on`,`antitoxic on`,`antivirus on`,`autosticker on`,`autostickerpc on`,`antilinkgc on`,`antilinktg on`,`antilinktt on`,`antilinkytch on`,`antilinkytvid on`,`antilinkig on`,`antilinkfb on`,`antilinktwit on`,`antiwame on`,`nsfw on`]
-                    let comm = [`group close`,`antilinkall off`,`antitoxic off`,`antivirus off`,`autosticker off`,`autostickerpc on`,`antilinkgc off`,`antilinktg on`,`antilinktt on`,`antilinkytch on`,`antilinkytvid on`,`antilinkig on`,`antilinkfb on`,`antilinktwit on`,`antiwame on`,`nsfw on`]
-                    let listnya = [`Group open/close`,`antilinkall on/off`,`antitoxic on/off`,`antivirus on/off`,`autosticker on/off`,`autostickerpc on/off`,`Antilink Group on/off`,`Antilink Telegram on/off`,`Antilink Tiktok on/off`,`Antilink Youtube Channel on/off`,`Antilink Youtube Video on/off`,`Antilink Instagram on/off`,`Antilink Facebook on/off`,`Antilink Twitter on/off`,`Anti Wame on/off`,`nsfw on/off`]
+                    let com = [`group open`,`antilinkall on`,`antitoxic on`,`antivirus on`,`autosticker on`,`autostickerpc on`,`antilinkgc on`,`antilinktg on`,`antilinktt on`,`antilinkytch on`,`antilinkytvid on`,`antilinkig on`,`antilinkfb on`,`antilinktwit on`,`antiwame on`,`autosticker`,`autostickerpc`,`nsfw on`]
+                    let comm = [`group close`,`antilinkall off`,`antitoxic off`,`antivirus off`,`autosticker off`,`autostickerpc on`,`antilinkgc off`,`antilinktg on`,`antilinktt on`,`antilinkytch on`,`antilinkytvid on`,`antilinkig on`,`antilinkfb on`,`antilinktwit on`,`antiwame on`,`autosticker`,`autostickerpc`,`nsfw on`]
+                    let listnya = [`Group open/close`,`antilinkall on/off`,`antitoxic on/off`,`antivirus on/off`,`autosticker on/off`,`autostickerpc on/off`,`Antilink Group on/off`,`Antilink Telegram on/off`,`Antilink Tiktok on/off`,`Antilink Youtube Channel on/off`,`Antilink Youtube Video on/off`,`Antilink Instagram on/off`,`Antilink Facebook on/off`,`Antilink Twitter on/off`,`Anti Wame on/off`,`autosticker on/off`,`autostickerpc on/off`,`nsfw on/off`]
                     let suruh = [`Activate this command`, `Deactivate this command`]
-                    let fiturname = [`🥵 𝗚𝗿𝗼𝘂𝗽 ✨`,`🥵 𝗔𝗻𝘁𝗶𝗹𝗶𝗻𝗸 𝗮𝗹𝗹 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝘁𝗼𝘅𝗶𝗰 ☣️`,`🥵 𝗔𝗻𝘁𝗶 𝘃𝗶𝗿𝘂𝘀 🦠`,`🥵 𝗔𝘂𝘁𝗼 𝘀𝘁𝗶𝗰𝗸𝗲𝗿 👻`,`🥵 𝗔𝘂𝘁𝗼 𝘀𝘁𝗶𝗰𝗸𝗲𝗿 𝗽𝗿𝗶𝘃𝗮𝘁𝗲 𝗰𝗵𝗮𝘁 👽`,`🥵 𝗔𝗻𝘁𝗶 𝗴𝗿𝗼𝘂𝗽 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝗧𝗶𝗸𝗧𝗼𝗸 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝗬𝗼𝘂𝗧𝘂𝗯𝗲 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝗬𝗼𝘂𝗧𝘂𝗯𝗲 𝘃𝗶𝗱𝗲𝗼 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝗜𝗻𝘀𝘁𝗮𝗴𝗿𝗮𝗺 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝗙𝗮𝗰𝗲𝗯𝗼𝗼𝗸 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝗧𝘄𝗶𝘁𝘁𝗲𝗿 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝗪𝗵𝗮𝘁𝘀𝗔𝗽𝗽 𝗽𝗿𝗼𝗳𝗶𝗹𝗲 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗡𝗦𝗙𝗪 💦`]
+                    let fiturname = [`🥵 𝗚𝗿𝗼𝘂𝗽 ✨`,`🥵 𝗔𝗻𝘁𝗶𝗹𝗶𝗻𝗸 𝗮𝗹𝗹 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝘁𝗼𝘅𝗶𝗰 ☣️`,`🥵 𝗔𝗻𝘁𝗶 𝘃𝗶𝗿𝘂𝘀 🦠`,`🥵 𝗔𝘂𝘁𝗼 𝘀𝘁𝗶𝗰𝗸𝗲𝗿 👻`,`🥵 𝗔𝘂𝘁𝗼 𝘀𝘁𝗶𝗰𝗸𝗲𝗿 𝗽𝗿𝗶𝘃𝗮𝘁𝗲 𝗰𝗵𝗮𝘁 👽`,`🥵 𝗔𝗻𝘁𝗶 𝗴𝗿𝗼𝘂𝗽 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝗧𝗶𝗸𝗧𝗼𝗸 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝗬𝗼𝘂𝗧𝘂𝗯𝗲 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝗬𝗼𝘂𝗧𝘂𝗯𝗲 𝘃𝗶𝗱𝗲𝗼 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝗜𝗻𝘀𝘁𝗮𝗴𝗿𝗮𝗺 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝗙𝗮𝗰𝗲𝗯𝗼𝗼𝗸 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝗧𝘄𝗶𝘁𝘁𝗲𝗿 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝗪𝗵𝗮𝘁𝘀𝗔𝗽𝗽 𝗽𝗿𝗼𝗳𝗶𝗹𝗲 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗔𝘂𝘁𝗼 𝘀𝘁𝗶𝗰𝗸𝗲𝗿 🖼️`,`🥵 𝗔𝘂𝘁𝗼𝘀𝘁𝗶𝗰𝗸𝗲𝗿 𝗽𝗿𝗶𝘃𝗮𝘁𝗲 𝗰𝗵𝗮𝘁 🖼️`,`🥵 𝗡𝗦𝗙𝗪 💦`]
                     let startnum = 0; let startnu = 0; let startn = 0;let start = 0
                     let startnumm = 1
                     for (let x of com) {
@@ -1852,7 +1878,7 @@ if (isBanChat) return reply(mess.banChat)
 }
   break
 
-                case 'command': {
+                case 'help': case 'menu':{
                 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -1870,17 +1896,27 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 🦊 *Owner num.*  : http://wa.me//${global.OwnerNumber}
 🍓 *Group name*  : ${groupMetadata.subject}
 │                                                 ❒
-╰╼━━━━━━━━━━━━━━━━╾╯\n\n_Tap here for *full command*_ 🐤👇\nㅤ`,
+╰╼━━━━━━━━━━━━━━━━╾╯\n\n_Tap here for *full commands*_ 🐤👇\nㅤ`,
                     buttonText: "🦋⃟✮͢ 𝑻𝒂𝒑 𝒉𝒆𝒓𝒆 ✮⃝❤️" ,
                     footerText: `${global.BotName}`,
                     listType: "SINGLE_SELECT",
                     sections: [{
-								"title": "Initial Features Of Bot 🦄",
+								"title": "Main features of the Bot ❣️",
 								"rows": [
 									{
-										"title": "Other ☕",
-										"description": "Displays The List Of Other Features",
-										"rowId": `${prefix}othermenu`
+										"title": "ᵃⁿʸᵃ⃟❤️ 𝗔𝗹𝗹 𝗺𝗲𝗻𝘂 𝗹𝗶𝘀𝘁",
+										"description": "Display the list of all features",
+										"rowId": `${prefix}allmenu`
+									}
+								]
+							},
+                                                        {
+								"title": "Quick commands functions for lazy people ❤️‍🔥",
+								"rows": [
+									{
+										"title": "ᵃⁿʸᵃ⃟❤️‍🔥 𝗔𝗹𝗹 𝗺𝗲𝗻𝘂 𝗹𝗶𝘀𝘁 𝟮.𝟬",
+										"description": "Use most of the commands without any typing efforts",
+										"rowId": `${prefix}allmenu2`
 									}
 								]
 							},
@@ -1888,119 +1924,104 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 								"title": "Bot Features ❤️",
 								"rows": [
 									{
-										"title": "All Menu 🥀",
-										"description": "Displays The List Of All The Features!",
-										"rowId": `${prefix}allmenu`
+										"title": "ᵃⁿʸᵃ⃟🐦 𝗚𝗿𝗼𝘂𝗽 𝗺𝗲𝗻𝘂",
+										"description": "Display the list of group features",
+										"rowId": `${prefix}groupmenu`
 									},
+                                                                        {
+											"title": "ᵃⁿʸᵃ⃟⚙️ 𝗚𝗿𝗼𝘂𝗽 𝘀𝗲𝘁𝘁𝗶𝗻𝗴𝘀",
+										"description": "Display the list of all group settings ",
+										"rowId": `${prefix}groupsettings`
+										},
 									{
-										"title": "Owner Menu 💠",
-										"description": "Displays The List Of Owner Features",
+										"title": "ᵃⁿʸᵃ⃟🥵 𝗢𝘄𝗻𝗲𝗿 𝗺𝗲𝗻𝘂",
+										"description": "Display the list of owner features",
 										"rowId": `${prefix}ownermenu`
 										},
 									{
-										"title": "Group Menu ✨",
-										"description": "Displays The List Of Main Features",
-										"rowId": `${prefix}groupmenu`
+										"title": "ᵃⁿʸᵃ⃟⚠️ 𝗔𝗻𝘁𝗶𝗹𝗶𝗻𝗸 𝗺𝗲𝗻𝘂",
+										"description": "Display the list of antilink features",
+										"rowId": `${prefix}antilinkmenu`
 										},
 										{
-										"title": "Rpg Menu 🏞️",
-										"description": "Displays The List Of Rpg Features",
-										"rowId": `${prefix}rpgmenu`
-										},
-										{
-										"title": "Maker Menu 🌈",
-										"description": "Displays The List Of Logo Making Features",
-										"rowId": `${prefix}indomenu`
-									},
-									{
-										"title": "Sound Menu 🎵",
-										"description": "Displays The List Of Sound Features",
-										"rowId": `${prefix}soundmenu`
-									},
-									{
-										"title": "Download Menu ↘️",
-										"description": "Displays The List Of Download Features",
-										"rowId": `${prefix}downloadmenu`
-									},
-									{
-										"title": "Sticker Menu 🃏",
-										"description": "Displays The List Of Sticker Features",
-										"rowId": `${prefix}indomenu`
-									},
-									{
-										"title": "Search Menu 🔎",
-										"description": "Displays The List Of Searching Features",
+										"title": "ᵃⁿʸᵃ⃟🔍 𝗦𝗲𝗮𝗿𝗰𝗵 𝗺𝗲𝗻𝘂",
+										"description": "Display the list of searching features",
 										"rowId": `${prefix}searchmenu`
-									},
-									{
-										"title": "Tool Menu ⚙️",
-										"description": "Displays The List Of Tool Features",
-										"rowId": `${prefix}toolmenu`
-									},
-									{
-										"title": "Random Image Menu 🌆",
-										"description": "Displays The List Of Random Image Features",
-										"rowId": `${prefix}randomimagemenu`
-									},
-										{
-											"title": "Anime Menu 😘",
-										"description": "Displays The List Of Random Anime Features",
-										"rowId": `${prefix}animemenu`
 										},
 										{
-										"title": "Anime Sticker Menu ☺️",
-										"description": "Displays The List Of Anime Sticker Features",
-										"rowId": `${prefix}animestickermenu`
-									     },
-									{
-										"title": "Nsfw Menu 🤓",
-										"description": "Displays The List Of Nsfe Features",
-										"rowId": `${prefix}nsfwmenu`
-									     },
-										{
-											"title": "Fun Menu 🕺",
-										"description": "Displays The List Of Fun Features",
-										"rowId": `${prefix}funmenu`
-										},
-										{
-										"title": "Game Menu 🎮",
-										"description": "Displays The List Of Game Features",
-										"rowId": `${prefix}indomenu`
-									},
-										{
-											"title": "Convert Menu ⚒️",
-										"description": "Displays The List Of Convert Features",
+										"title": "ᵃⁿʸᵃ⃟😼 𝗖𝗼𝗻𝘃𝗲𝗿𝘁 𝗺𝗲𝗻𝘂",
+										"description": "Display the list of converting features",
 										"rowId": `${prefix}convertmenu`
-										},
-										{
-											"title": "Database Menu ♻️",
-										"description": "Displays The List Of Database Features",
-										"rowId": `${prefix}databasemenu`
-										},
-										{
-											"title": "Islamic Menu 🧕",
-										"description": "Displays The List Of Islamic Features",
-										"rowId": `${prefix}islamicmenu`
-										},
-										{
-										"title": "Indo Menu  🦜",
-										"description": "Displays The List Of Indo Features",
-										"rowId": `${prefix}indomenu`
+									},
+									{
+										"title": "ᵃⁿʸᵃ⃟🔊 𝗔𝘂𝗱𝗶𝗼 𝗺𝗲𝗻𝘂",
+										"description": "Display the list of audio changing features",
+										"rowId": `${prefix}audiomenu`
+									},
+									{
+										"title": "ᵃⁿʸᵃ⃟🥳 𝗙𝘂𝗻 𝗺𝗲𝗻𝘂",
+										"description": "Display the list of fun features",
+										"rowId": `${prefix}funmenu`
+									},
+									{
+										"title": "ᵃⁿʸᵃ⃟⬇️ 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗲𝗿 𝗺𝗲𝗻𝘂",
+										"description": "Display the list of downloading features",
+										"rowId": `${prefix}downloadermenu`
+									},
+									{
+										"title": "ᵃⁿʸᵃ⃟😚 𝗔𝗻𝗶𝗺𝗲 𝗺𝗲𝗻𝘂",
+										"description": "Display the list of anime features",
+										"rowId": `${prefix}animemenu`
+									},
+									{
+										"title": "ᵃⁿʸᵃ⃟🎃 𝗧𝗲𝘅𝘁𝗺𝗮𝗸𝗲𝗿 𝗺𝗲𝗻𝘂",
+										"description": "Display the list of textmaker features",
+										"rowId": `${prefix}textpromenu`
+									},
+									{
+										"title": "ᵃⁿʸᵃ⃟👻 𝗥𝗲𝗮𝗰𝘁𝗶𝗼𝗻 𝗺𝗲𝗻𝘂",
+										"description": "Display the list of reactions features",
+										"rowId": `${prefix}reactionmenu`
 									},
 										{
-											"title": "Horoscope Menu 🕊️",
-										"description": "Displays The List Of Horoscope Features",
-										"rowId": `${prefix}indohoroscopemenu`
+											"title": "ᵃⁿʸᵃ⃟🌺 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻 𝗺𝗲𝗻𝘂",
+										"description": "Display the list of informations features",
+										"rowId": `${prefix}infomenu`
+										},
+										{
+										"title": "ᵃⁿʸᵃ⃟❤️‍🩹 𝗧𝗼𝗼𝗹 𝗺𝗲𝗻𝘂",
+										"description": "Display the list of tools",
+										"rowId": `${prefix}toolmenu`
+									     },
+									{
+										"title": "ᵃⁿʸᵃ⃟🥶 𝗩𝗼𝗶𝗰𝗲 𝗺𝗲𝗻𝘂",
+										"description": "Display the list of voice features",
+										"rowId": `${prefix}voicemenu`
+									     },
+										{
+											"title": "ᵃⁿʸᵃ⃟🐤 𝗠𝗼𝗿𝗲 𝗴𝗿𝗼𝘂𝗽𝘀",
+										"description": "Display the list of more groups",
+										"rowId": `${prefix}moregroup`
+										},
+										{
+										"title": "ᵃⁿʸᵃ⃟💦 𝗡𝗦𝗙𝗪",
+										"description": "Warning ⚠️ only for hawasi people",
+										"rowId": `${prefix}nsfw`
+										},
+                                                                                {
+										"title": "𝗡𝗲𝗲𝗱 𝘀𝗼𝗺𝗲 𝗵𝗲𝗹𝗽 🫠",
+										"description": "If you have any Bot related questions",
+										"rowId": `${prefix}needhelp`
 										}
 								]
 							},
 							{
-								"title": "Chat With Fellow Users 🌝",
+								"title": "If you want to own this Bot 🥀",
 								"rows": [
 									{
-										"title": "Anonymous Chat Menu 🙎🏻‍♂️",
-										"description": "Displays The List Of Anonymous Chat Features",
-										"rowId": `${prefix}anonymousmenu`
+										"title": "ᵃⁿʸᵃ⃟😍 𝗕𝘂𝘆 𝘁𝗵𝗶𝘀 𝗕𝗼𝘁 ",
+										"description": "Tap here to buy this Bot",
+										"rowId": `${prefix}buybot`
 									}
 								]
 							},
@@ -2008,9 +2029,9 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 								"title": "Credit ©️",
 								"rows": [
 									{
-										"title": "Thanks To ❤️",
+										"title": "𝖳𝗁𝖺𝗇𝗄𝗌 𝗍𝗈 ✨",
 										"description": "Displays The List Of Credit Of The Bot !!",
-										"rowId": `${prefix}tqtt`
+										"rowId": `${prefix}credit`
 									}
 								]
 							}
@@ -5290,7 +5311,7 @@ replay('Broadcast Sent !')
 break    
 
 
-case 'allmenu': case 'help':{
+case 'allmenu': case 'm':{
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     Miku.sendMessage(from, { react: { text: `${global.reactmoji1}`, key: m.key }})
@@ -5615,9 +5636,9 @@ case 'allmenu': case 'help':{
  Powered by : *Pika❤️*
  Using by       : *${pushname}*`    
 
- let buttonshelpm = [{buttonId: `${prefix}owner`, buttonText: {displayText: `❤️owner❤️`}, type: 1},
-		     {buttonId: `${prefix}tagall`, buttonText: {displayText: `Tag all ✨`}, type: 1},
-                     {buttonId: `${prefix}antilinkall`, buttonText: {displayText: `Antilink 🐦`}, type: 1}       	     
+ let buttonshelpm = [{buttonId: `${prefix}owner`, buttonText: {displayText: `❤️𝘖𝘸𝘯𝘦𝘳❤️`}, type: 1},
+		     {buttonId: `${prefix}tagall Hey everyone come online and use this cool bot🥀`, buttonText: {displayText: `𝘛𝘢𝘨 𝘢𝘭𝘭 ✨`}, type: 1},
+                     {buttonId: `${prefix}groupsettings`, buttonText: {displayText: `𝘎𝘳𝘰𝘶𝘱 𝘴𝘦𝘵𝘵𝘪𝘯𝘨𝘴⚙️`}, type: 1}       	     
 		    ]
                 let buttonMessage = {
                     video:fs.readFileSync('./system/miku2.mp4'),gifPlayback:true,
@@ -5636,7 +5657,7 @@ case 'alive':
     if(isCmd){
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
-
+    Miku.sendMessage(from, { react: { text: `${global.reactmoji5}`, key: m.key }})
       mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
     
         
@@ -5644,11 +5665,11 @@ case 'alive':
      
          let butRun = [
                 {buttonId: `-owner`, buttonText: {displayText: '❤️ 𝘖𝘸𝘯𝘦𝘳 ❤️'}, type: 1},
-                {buttonId: `-me`, buttonText: {displayText: '𝘈𝘣𝘰𝘶𝘵 𝘵𝘩𝘪𝘴 𝘶𝘴𝘦𝘳 🥵'}, type: 1},      
+                {buttonId: `-profile`, buttonText: {displayText: '𝘈𝘣𝘰𝘶𝘵 𝘵𝘩𝘪𝘴 𝘶𝘴𝘦𝘳 🥵'}, type: 1},      
                 {buttonId: `-menu`, buttonText: {displayText: '🍓 𝘔𝘦𝘯𝘶 🍓'}, type: 1}
                 ]
                 let buttonMessage = {
-                    video:fs.readFileSync('./system/miku.mp4'),gifPlayback:true,
+                    video:fs.readFileSync('./system/Anyaalive.mp4'),gifPlayback:true,
                     caption: txt,
                     footer: `${global.BotName}`,
                     buttons: butRun,
@@ -5662,6 +5683,7 @@ case 'groupmenu':
     if(isCmd){
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
+    Miku.sendMessage(from, { react: { text: `${global.reactmoji2}`, key: m.key }})
 
       mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
     
@@ -5699,11 +5721,10 @@ case 'groupmenu':
 ╿                                     
 ╰╼⟨ ${pushname} ⟩╾⟢ `
      
-         let butRun = [
-                {buttonId: `-owner`, buttonText: {displayText: '❤️ 𝘖𝘸𝘯𝘦𝘳 ❤️'}, type: 1},
-                {buttonId: `-funmenu`, buttonText: {displayText: 'Fun menu 😂'}, type: 1},      
-                {buttonId: `-menu`, buttonText: {displayText: '🍓 𝘔𝘦𝘯𝘶 🍓'}, type: 1}
-                ]
+         let butRun = [{buttonId: `${prefix}owner`, buttonText: {displayText: `❤️owner❤️`}, type: 1},
+		     {buttonId: `${prefix}tagall Hey everyone come online and use this cool bot🥀`, buttonText: {displayText: `𝘛𝘢𝘨 𝘢𝘭𝘭 ✨`}, type: 1},
+                     {buttonId: `${prefix}groupsettings`, buttonText: {displayText: `𝘎𝘳𝘰𝘶𝘱 𝘴𝘦𝘵𝘵𝘪𝘯𝘨𝘴⚙️`}, type: 1}       	     
+		    ]
                 let buttonMessage = {
                     video:fs.readFileSync('./system/Group.mp4'),gifPlayback:true,
                     caption: needhelpmenu,
@@ -5719,6 +5740,7 @@ case 'ownermenu':
     if(isCmd){
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
+    Miku.sendMessage(from, { react: { text: `${global.reactmoji3}`, key: m.key }})
 
       mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
     
@@ -5753,9 +5775,8 @@ case 'ownermenu':
 ╰╼⟨ ${pushname} ⟩╾⟢ `
      
          let butRun = [
-                {buttonId: `-owner`, buttonText: {displayText: '❤️ 𝘖𝘸𝘯𝘦𝘳 ❤️'}, type: 1},
-                {buttonId: `-animemenu`, buttonText: {displayText: 'Anime menu 🥵'}, type: 1},      
-                {buttonId: `-menu`, buttonText: {displayText: '🍓 𝘔𝘦𝘯𝘶 🍓'}, type: 1}
+                {buttonId: `-owner`, buttonText: {displayText: '❤️𝘖𝘸𝘯𝘦𝘳❤️'}, type: 1},
+                {buttonId: `-tagall Hey everyone come online and use this cool Bot✨`, buttonText: {displayText: '𝘛𝘢𝘨 𝘢𝘭𝘭 ✨'}, type: 1}
                 ]
                 let buttonMessage = {
                     video:fs.readFileSync('./system/Owner.mp4'),gifPlayback:true,
@@ -5772,6 +5793,7 @@ case 'antilinkmenu':
     if(isCmd){
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
+    Miku.sendMessage(from, { react: { text: `${global.reactmoji4}`, key: m.key }})
 
       mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
     
@@ -5804,9 +5826,8 @@ case 'antilinkmenu':
 ╰╼⟨ ${pushname} ⟩╾⟢ `
      
          let butRun = [
-                {buttonId: `-owner`, buttonText: {displayText: '❤️ 𝘖𝘸𝘯𝘦𝘳 ❤️'}, type: 1},
-                {buttonId: `-funmenu`, buttonText: {displayText: 'Fun menu 😂'}, type: 1},      
-                {buttonId: `-menu`, buttonText: {displayText: '🍓 𝘔𝘦𝘯𝘶 🍓'}, type: 1}
+                {buttonId: `-owner`, buttonText: {displayText: '❤️𝘖𝘸𝘯𝘦𝘳❤️'}, type: 1},
+                {buttonId: `-tagall`, buttonText: {displayText: '𝘛𝘢𝘨 𝘢𝘭𝘭 ✨'}, type: 1}
                 ]
                 let buttonMessage = {
                     video:fs.readFileSync('./system/Antilink.mp4'),gifPlayback:true,
@@ -5823,6 +5844,7 @@ case 'searchmenu':
     if(isCmd){
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
+    Miku.sendMessage(from, { react: { text: `${global.reactmoji6}`, key: m.key }})
 
       mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
     
@@ -5865,9 +5887,8 @@ case 'searchmenu':
 ╰╼⟨ ${pushname} ⟩╾⟢ `
      
          let butRun = [
-                {buttonId: `-owner`, buttonText: {displayText: '❤️ 𝘖𝘸𝘯𝘦𝘳 ❤️'}, type: 1},
-                {buttonId: `-funmenu`, buttonText: {displayText: 'Fun menu 😂'}, type: 1},      
-                {buttonId: `-menu`, buttonText: {displayText: '🍓 𝘔𝘦𝘯𝘶 🍓'}, type: 1}
+                {buttonId: `-owner`, buttonText: {displayText: '❤️𝘖𝘸𝘯𝘦𝘳❤️'}, type: 1},
+                {buttonId: `-tagall`, buttonText: {displayText: '𝘛𝘢𝘨 𝘢𝘭𝘭 ✨'}, type: 1}
                 ]
                 let buttonMessage = {
                     video:fs.readFileSync('./system/Search.mp4'),gifPlayback:true,
@@ -5884,6 +5905,7 @@ case 'convertermenu':
     if(isCmd){
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
+    Miku.sendMessage(from, { react: { text: `${global.reactmoji7}`, key: m.key }})
 
       mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
     
@@ -5917,12 +5939,696 @@ case 'convertermenu':
 ╰╼⟨ ${pushname} ⟩╾⟢ `
      
          let butRun = [
-                {buttonId: `-owner`, buttonText: {displayText: '❤️ 𝘖𝘸𝘯𝘦𝘳 ❤️'}, type: 1},
-                {buttonId: `-funmenu`, buttonText: {displayText: 'Fun menu 😂'}, type: 1},      
-                {buttonId: `-menu`, buttonText: {displayText: '🍓 𝘔𝘦𝘯𝘶 🍓'}, type: 1}
+                {buttonId: `-owner`, buttonText: {displayText: '❤️𝘖𝘸𝘯𝘦𝘳❤️'}, type: 1},
+                {buttonId: `-tagall`, buttonText: {displayText: '𝘛𝘢𝘨 𝘢𝘭𝘭 ✨'}, type: 1}
                 ]
                 let buttonMessage = {
                     video:fs.readFileSync('./system/Convert.mp4'),gifPlayback:true,
+                    caption: txt,
+                    footer: `${global.BotName}`,
+                    buttons: butRun,
+                    headerType: 4
+                }
+            Miku.sendMessage(m.chat,buttonMessage,{quoted:m})
+                }
+break
+
+case 'audiomenu':
+    if(isCmd){
+    if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+    Miku.sendMessage(from, { react: { text: `${global.reactmoji8}`, key: m.key }})
+
+      mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
+    
+        
+ const txt = `╭╼━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━╾╮
+│                                      ❒
+🔥 *My prefix*       : ( - )
+❤️ *My name*       : ${global.BotName}
+🥵 *User name*    : ${pushname}
+😻 *Bot speed*     : ${latensie.toFixed(4)} ms
+🎃 *Owner name* : ${global.OwnerName}
+🍓 *Group name*  : ${groupMetadata.subject}
+│                                      ❒
+╰╼━━━━━━━━━━━━╾╯
+
+╭╼━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━╾╮
+╽                                     🎃
+┃
+❒✗ -bass
+❒✗ -tempo
+❒✗ -blown
+❒✗ -deep
+❒✗ -earrape
+❒✗ -fast
+❒✗ -fat
+❒✗ -nightcore
+❒✗ -reverse
+❒✗ -robot
+❒✗ -slow
+❒✗ -squirrel
+╿                                     
+╰╼⟨ ${pushname} ⟩╾⟢ `
+     
+         let butRun = [
+                {buttonId: `-owner`, buttonText: {displayText: '❤️𝘖𝘸𝘯𝘦𝘳❤️'}, type: 1},
+                {buttonId: `-tagall`, buttonText: {displayText: '𝘛𝘢𝘨 𝘢𝘭𝘭 ✨'}, type: 1},
+                {buttonId: `-downloadermenu`, buttonText: {displayText: '𝘋𝘰𝘸𝘯𝘭𝘰𝘢𝘥 🥀'}, type: 1}
+                ]
+                let buttonMessage = {
+                    video:fs.readFileSync('./system/Audio.mp4'),gifPlayback:true,
+                    caption: txt,
+                    footer: `${global.BotName}`,
+                    buttons: butRun,
+                    headerType: 4
+                }
+            Miku.sendMessage(m.chat,buttonMessage,{quoted:m})
+                }
+break
+
+case 'funmenu':
+    if(isCmd){
+    if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+    Miku.sendMessage(from, { react: { text: `${global.reactmoji9}`, key: m.key }})
+
+      mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
+    
+        
+ const txt = `╭╼━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━╾╮
+│                                      ❒
+🔥 *My prefix*       : ( - )
+❤️ *My name*       : ${global.BotName}
+🥵 *User name*    : ${pushname}
+😻 *Bot speed*     : ${latensie.toFixed(4)} ms
+🎃 *Owner name* : ${global.OwnerName}
+🍓 *Group name*  : ${groupMetadata.subject}
+│                                      ❒
+╰╼━━━━━━━━━━━━╾╯
+
+╭╼━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━╾╮
+╽                                     🎃
+┃
+❒✗ -emojimix
+❒✗ -reaction
+❒✗ -truth
+❒✗ -dare
+❒✗ -couple
+❒✗ -soulmate
+❒✗ -handsomecheck
+❒✗ -beautifulcheck
+❒✗ -awesomecheck
+❒✗ -greatcheck
+❒✗ -gaycheck
+❒✗ -cutecheck
+❒✗ -lesbiancheck
+❒✗ -hornycheck
+❒✗ -prettycheck
+❒✗ -lovelycheck
+❒✗ -uglycheck
+❒✗ -charactercheck
+╿                                     
+╰╼⟨ ${pushname} ⟩╾⟢ `
+     
+         let butRun = [
+                {buttonId: `-owner`, buttonText: {displayText: '❤️𝘖𝘸𝘯𝘦𝘳❤️'}, type: 1},
+                {buttonId: `-tagall`, buttonText: {displayText: '𝘛𝘢𝘨 𝘢𝘭𝘭 ✨'}, type: 1},
+                {buttonId: `-fun2`, buttonText: {displayText: '𝘍𝘶𝘯𝘮𝘦𝘯𝘶 ２.０ ⚠️'}, type: 1}
+                ]
+                let buttonMessage = {
+                    video:fs.readFileSync('./system/Fun.mp4'),gifPlayback:true,
+                    caption: txt,
+                    footer: `${global.BotName}`,
+                    buttons: butRun,
+                    headerType: 4
+                }
+            Miku.sendMessage(m.chat,buttonMessage,{quoted:m})
+                }
+break
+
+case 'downloadermenu':
+    if(isCmd){
+    if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+    Miku.sendMessage(from, { react: { text: `${global.reactmoji10}`, key: m.key }})
+
+      mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
+    
+        
+ const txt = `╭╼━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━╾╮
+│                                      ❒
+🔥 *My prefix*       : ( - )
+❤️ *My name*       : ${global.BotName}
+🥵 *User name*    : ${pushname}
+😻 *Bot speed*     : ${latensie.toFixed(4)} ms
+🎃 *Owner name* : ${global.OwnerName}
+🍓 *Group name*  : ${groupMetadata.subject}
+│                                      ❒
+╰╼━━━━━━━━━━━━╾╯
+
+╭╼━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━╾╮
+╽                                     🎃
+┃
+❒✗ -play
+❒✗ -jpeg
+❒✗ -ytmp3
+❒✗ -ytmp3x
+❒✗ -ytmp4
+❒✗ -ytmp4x
+❒✗ -ytvideo
+❒✗ -mediafire
+❒✗ -instagram
+❒✗ -igtv
+❒✗ -facebook
+❒✗ -fbmp3
+❒✗ -twitter
+❒✗ -twitterxx
+❒✗ -twittermp3
+❒✗ -tiktok
+❒✗ -tiktokaudio
+❒✗ -tiktoknowm
+❒✗ -mediafire  
+╿                                     
+╰╼⟨ ${pushname} ⟩╾⟢ `
+     
+         let butRun = [
+                {buttonId: `-owner`, buttonText: {displayText: '❤️𝘖𝘸𝘯𝘦𝘳❤️'}, type: 1},
+                {buttonId: `-tagall`, buttonText: {displayText: '𝘛𝘢𝘨 𝘢𝘭𝘭 ✨'}, type: 1},
+                {buttonId: `-searchmenu`, buttonText: {displayText: '𝘚𝘦𝘢𝘳𝘤𝘩 🔍'}, type: 1}
+                ]
+                let buttonMessage = {
+                    video:fs.readFileSync('./system/Download.mp4'),gifPlayback:true,
+                    caption: txt,
+                    footer: `${global.BotName}`,
+                    buttons: butRun,
+                    headerType: 4
+                }
+            Miku.sendMessage(m.chat,buttonMessage,{quoted:m})
+                }
+break
+
+case 'fun2':
+    if(isCmd){
+    if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+    Miku.sendMessage(from, { react: { text: `${global.reactmoji19}`, key: m.key }})
+
+      mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
+    
+        
+ const txt = `*ONLY FOR ADULTS ⚠️*
+
+╭╼━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━╾╮
+│                                      ❒
+🔥 *My prefix*       : ( - )
+❤️ *My name*       : ${global.BotName}
+🥵 *User name*    : ${pushname}
+😻 *Bot speed*     : ${latensie.toFixed(4)} ms
+🎃 *Owner name* : ${global.OwnerName}
+🍓 *Group name*  : ${groupMetadata.subject}
+│                                      ❒
+╰╼━━━━━━━━━━━━╾╯
+
+╭╼━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━╾╮
+╽                                     🎃
+┃
+❒✗ -foolish
+❒✗ -smart
+❒✗ -idiot
+❒✗ -gay
+❒✗ -lesbi
+❒✗ -bastard
+❒✗ -stubble
+❒✗ -dog
+❒✗ -fuck
+❒✗ -ape
+❒✗ -noob
+❒✗ -great
+❒✗ -horny
+❒✗ -wibu
+❒✗ -asshole
+❒✗ -handsome
+❒✗ -beautiful
+❒✗ -cute
+❒✗ -kind
+❒✗ -ugly
+❒✗ -pretty
+❒✗ -lesbian
+❒✗ -randi 
+❒✗ -gandu
+❒✗ -madarchod
+❒✗ -kala
+❒✗ -gora
+❒✗ -chutiya
+❒✗ -nibba
+❒✗ -nibbi 
+❒✗ -bhosdiwala
+❒✗ -chutmarika
+❒✗ -bokachoda
+❒✗ -stupid
+❒✗ -suarerbaccha
+❒✗ -bolochoda
+❒✗ -muthal
+❒✗ -muthbaaz
+❒✗ -randibaaz
+❒✗ -tpibaaz
+❒✗ -cunt
+❒✗ -nerd
+❒✗ -behenchod
+❒✗ -behnchoda
+❒✗ -dhosdika
+❒✗ -nigger
+❒✗ -lund
+❒✗ -nigga
+❒✗ -tharki
+❒✗ -mumu
+❒✗ -rascal
+❒✗ -scumbag
+❒✗ -comrade
+❒✗ -fagot
+❒✗ -scoundrel
+❒✗ -ditch
+❒✗ -dope
+❒✗ -lit
+❒✗ -dumbass
+❒✗ -sexy
+❒✗ -crackhead
+❒✗ -motherfucker
+❒✗ -dogla
+❒✗ -bewda
+❒✗ -boka
+❒✗ -khanki
+❒✗ -bal
+❒✗ -sucker
+❒✗ -fuckboy
+❒✗ -playboy
+❒✗ -fuckgirl
+❒✗ -playgirl
+❒✗ -hot
+╿                                     
+╰╼⟨ ${pushname} ⟩╾⟢ `
+     
+         let butRun = [
+                {buttonId: `-owner`, buttonText: {displayText: '❤️ 𝘖𝘸𝘯𝘦𝘳 ❤️'}, type: 1},
+                {buttonId: `-reactionmenu`, buttonText: {displayText: '𝘙𝘦𝘢𝘤𝘵𝘪𝘰𝘯 𝘮𝘦𝘯𝘶👻'}, type: 1},      
+                {buttonId: `-menu`, buttonText: {displayText: '🍓 𝘔𝘦𝘯𝘶 🍓'}, type: 1}
+                ]
+                let buttonMessage = {
+                    video:fs.readFileSync('./system/Funmenu2.mp4'),gifPlayback:true,
+                    caption: txt,
+                    footer: `${global.BotName}`,
+                    buttons: butRun,
+                    headerType: 4
+                }
+            Miku.sendMessage(m.chat,buttonMessage,{quoted:m})
+                }
+break
+
+case 'animemenu':
+    if(isCmd){
+    if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+    Miku.sendMessage(from, { react: { text: `${global.reactmoji11}`, key: m.key }})
+
+      mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
+    
+        
+ const txt = `╭╼━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━╾╮
+│                                      ❒
+🔥 *My prefix*       : ( - )
+❤️ *My name*       : ${global.BotName}
+🥵 *User name*    : ${pushname}
+😻 *Bot speed*     : ${latensie.toFixed(4)} ms
+🎃 *Owner name* : ${global.OwnerName}
+🍓 *Group name*  : ${groupMetadata.subject}
+│                                      ❒
+╰╼━━━━━━━━━━━━╾╯
+
+╭╼━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━╾╮
+╽                                     🎃
+┃
+❒✗ -crosplay
+❒✗ -waifu
+❒✗ -loli
+❒✗ -neko
+❒✗ -ppcouple
+❒✗ -feed
+❒✗ -foxgirl
+❒✗ -feed
+❒✗ -meow
+❒✗ -tickle
+❒✗ -wallpaper
+❒✗ -coffee
+❒✗ -animenom
+❒✗ -waifu3
+❒✗ -neko2
+❒✗ -feed
+❒✗ -meow
+❒✗ -tickle
+❒✗ -awoo
+❒✗ -animewallpaper2
+❒✗ -anime
+❒✗ -manga
+╿                                     
+╰╼⟨ ${pushname} ⟩╾⟢ `
+     
+         let butRun = [
+                {buttonId: `-owner`, buttonText: {displayText: '❤️𝘖𝘸𝘯𝘦𝘳❤️'}, type: 1},
+                {buttonId: `-waifu`, buttonText: {displayText: '𝘞𝘢𝘪𝘧𝘶 ❤️‍🔥'}, type: 1},
+                {buttonId: `-nsfw`, buttonText: {displayText: '𝘕𝘚𝘍𝘞 💦'}, type: 1}
+                ]
+                let buttonMessage = {
+                    video:fs.readFileSync('./system/Anime.mp4'),gifPlayback:true,
+                    caption: txt,
+                    footer: `${global.BotName}`,
+                    buttons: butRun,
+                    headerType: 4
+                }
+            Miku.sendMessage(m.chat,buttonMessage,{quoted:m})
+                }
+break
+
+case 'textmakermenu':
+    if(isCmd){
+    if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+    Miku.sendMessage(from, { react: { text: `${global.reactmoji12}`, key: m.key }})
+
+      mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
+    
+        
+ const txt = `╭╼━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━╾╮
+│                                      ❒
+🔥 *My prefix*       : ( - )
+❤️ *My name*       : ${global.BotName}
+🥵 *User name*    : ${pushname}
+😻 *Bot speed*     : ${latensie.toFixed(4)} ms
+🎃 *Owner name* : ${global.OwnerName}
+🍓 *Group name*  : ${groupMetadata.subject}
+│                                      ❒
+╰╼━━━━━━━━━━━━╾╯
+
+╭╼━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━╾╮
+╽                                     🎃
+┃
+❒✗ -candy
+❒✗ -christmas
+❒✗ -3Dchristmas
+❒✗ -sparklechristmas
+❒✗ -deepsea
+❒✗ -scifi
+❒✗ -rainbow
+❒✗ -waterpipe
+❒✗ -spooky
+❒✗ -pencil
+❒✗ -circuit
+❒✗ -discovery
+❒✗ -metalic
+❒✗ -fiction
+❒✗ -demon
+❒✗ -transformar
+❒✗ -berry
+❒✗ -thunder 
+❒✗ -Magma
+❒✗ -3Dstone
+❒✗ -neonlight
+❒✗ -glitch
+❒✗ -harrypotter
+❒✗ -broken glass
+❒✗ -papercut
+❒✗ -watercolour
+❒✗ -multicolour
+❒✗ -neondevil
+❒✗ -underwater
+❒✗ -graffitibike
+❒✗ -snow
+❒✗ -cloud
+❒✗ -honey
+❒✗ -ice
+❒✗ -fruitjuice
+❒✗ -biscuit 
+❒✗ -wood
+❒✗ -chocolate
+❒✗ -strawberry
+❒✗ -matrix
+❒✗ -blood
+❒✗ -dropwater
+❒✗ -toxic
+❒✗ -lava
+❒✗ -rock
+❒✗ -bloodglas
+❒✗ -hallowen
+❒✗ -darkgold
+❒✗ -joker
+❒✗ -wicker
+❒✗ -firework
+❒✗ -skeleton
+❒✗ -blackpink
+❒✗ -sand
+❒✗ -glue
+❒✗ -1917
+╿                                     
+╰╼⟨ ${pushname} ⟩╾⟢ `
+     
+         let butRun = [
+                {buttonId: `-owner`, buttonText: {displayText: '❤️𝘖𝘸𝘯𝘦𝘳❤️'}, type: 1},
+                {buttonId: `-tagall`, buttonText: {displayText: '𝘛𝘢𝘨 𝘢𝘭𝘭 ✨'}, type: 1}
+                ]
+                let buttonMessage = {
+                    video:fs.readFileSync('./system/Textmenu.mp4'),gifPlayback:true,
+                    caption: txt,
+                    footer: `${global.BotName}`,
+                    buttons: butRun,
+                    headerType: 4
+                }
+            Miku.sendMessage(m.chat,buttonMessage,{quoted:m})
+                }
+break
+
+case 'reactionmenu2':
+    if(isCmd){
+    if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+    Miku.sendMessage(from, { react: { text: `${global.reactmoji13}`, key: m.key }})
+
+      mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
+    
+        
+ const txt = `╭╼━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━╾╮
+│                                      ❒
+🔥 *My prefix*       : ( - )
+❤️ *My name*       : ${global.BotName}
+🥵 *User name*    : ${pushname}
+😻 *Bot speed*     : ${latensie.toFixed(4)} ms
+🎃 *Owner name* : ${global.OwnerName}
+🍓 *Group name*  : ${groupMetadata.subject}
+│                                      ❒
+╰╼━━━━━━━━━━━━╾╯
+
+╭╼━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━╾╮
+╽                                     🎃
+┃
+❒✗ -bonk
+❒✗ -cry
+❒✗ -bully
+❒✗ -cuddle
+❒✗ -hug
+❒✗ -kiss
+❒✗ -lick
+❒✗ -pat
+❒✗ -smug
+❒✗ -yeet
+❒✗ -blush
+❒✗ -smile
+❒✗ -wave
+❒✗ -highfive
+❒✗ -handhold
+❒✗ -nom
+❒✗ -glomp
+❒✗ -bite
+❒✗ -slap
+❒✗ -kill
+❒✗ -happy
+❒✗ -wink
+❒✗ -poke
+❒✗ -dance
+❒✗ -cringe
+╿                                     
+╰╼⟨ ${pushname} ⟩╾⟢ `
+     
+         let butRun = [
+                {buttonId: `-owner`, buttonText: {displayText: '❤️𝘖𝘸𝘯𝘦𝘳❤️'}, type: 1},
+                {buttonId: `-tagall`, buttonText: {displayText: '𝘛𝘢𝘨 𝘢𝘭𝘭 ✨'}, type: 1}
+                ]
+                let buttonMessage = {
+                    video:fs.readFileSync('./system/Reaction.mp4'),gifPlayback:true,
+                    caption: txt,
+                    footer: `${global.BotName}`,
+                    buttons: butRun,
+                    headerType: 4
+                }
+            Miku.sendMessage(m.chat,buttonMessage,{quoted:m})
+                }
+break
+
+case 'infomenu':
+    if(isCmd){
+    if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+    Miku.sendMessage(from, { react: { text: `${global.reactmoji14}`, key: m.key }})
+
+      mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
+    
+        
+ const txt = `╭╼━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━╾╮
+│                                      ❒
+🔥 *My prefix*       : ( - )
+❤️ *My name*       : ${global.BotName}
+🥵 *User name*    : ${pushname}
+😻 *Bot speed*     : ${latensie.toFixed(4)} ms
+🎃 *Owner name* : ${global.OwnerName}
+🍓 *Group name*  : ${groupMetadata.subject}
+│                                      ❒
+╰╼━━━━━━━━━━━━╾╯
+
+╭╼━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━╾╮
+╽                                     🎃
+┃
+❒✗ -alive  *( bot working? )*
+❒✗ -speak
+❒✗ -${global.BotName} 
+❒✗ -calculator 
+❒✗ -stalk
+❒✗ -profile
+❒✗ -help
+❒✗ -listgc
+❒✗ -listpc
+❒✗ -support 
+❒✗ -script
+❒✗ -botgroups 
+❒✗ -quotesimagexxx
+❒✗ -animequote
+❒✗ -quote
+❒✗ -covid
+❒✗ -earthquake
+❒✗ -wiki
+╿                                     
+╰╼⟨ ${pushname} ⟩╾⟢ `
+     
+         let butRun = [
+                {buttonId: `-owner`, buttonText: {displayText: '❤️𝘖𝘸𝘯𝘦𝘳❤️'}, type: 1},
+                {buttonId: `-tagall`, buttonText: {displayText: '𝘛𝘢𝘨 𝘢𝘭𝘭 ✨'}, type: 1}
+                ]
+                let buttonMessage = {
+                    video:fs.readFileSync('./system/Info.mp4'),gifPlayback:true,
+                    caption: txt,
+                    footer: `${global.BotName}`,
+                    buttons: butRun,
+                    headerType: 4
+                }
+            Miku.sendMessage(m.chat,buttonMessage,{quoted:m})
+                }
+break
+
+case 'toolmenu':
+    if(isCmd){
+    if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+    Miku.sendMessage(from, { react: { text: `${global.reactmoji15}`, key: m.key }})
+
+      mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
+    
+        
+ const txt = `╭╼━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━╾╮
+│                                      ❒
+🔥 *My prefix*       : ( - )
+❤️ *My name*       : ${global.BotName}
+🥵 *User name*    : ${pushname}
+😻 *Bot speed*     : ${latensie.toFixed(4)} ms
+🎃 *Owner name* : ${global.OwnerName}
+🍓 *Group name*  : ${groupMetadata.subject}
+│                                      ❒
+╰╼━━━━━━━━━━━━╾╯
+
+╭╼━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━╾╮
+╽                                     🎃
+┃
+❒✗ -speak
+❒✗ -google 
+❒✗ -pinterest 
+❒✗ -play
+❒✗ -sticker 
+❒✗ -toimg
+❒✗ -checknumber
+╿                                     
+╰╼⟨ ${pushname} ⟩╾⟢ `
+     
+         let butRun = [
+                {buttonId: `-owner`, buttonText: {displayText: '❤️𝘖𝘸𝘯𝘦𝘳❤️'}, type: 1},
+                {buttonId: `-tagall`, buttonText: {displayText: '𝘛𝘢𝘨 𝘢𝘭𝘭 ✨'}, type: 1}
+                ]
+                let buttonMessage = {
+                    video:fs.readFileSync('./system/Tool.mp4'),gifPlayback:true,
+                    caption: txt,
+                    footer: `${global.BotName}`,
+                    buttons: butRun,
+                    headerType: 4
+                }
+            Miku.sendMessage(m.chat,buttonMessage,{quoted:m})
+                }
+break
+
+case 'moregroup':
+    if(isCmd){
+    if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+    Miku.sendMessage(from, { react: { text: `${global.reactmoji16}`, key: m.key }})
+
+      mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
+    
+        
+ const txt = `╭╼━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━╾╮
+│                                      ❒
+🔥 *My prefix*       : ( - )
+❤️ *My name*       : ${global.BotName}
+🥵 *User name*    : ${pushname}
+😻 *Bot speed*     : ${latensie.toFixed(4)} ms
+🎃 *Owner name* : ${global.OwnerName}
+🍓 *Group name*  : ${groupMetadata.subject}
+│                                      ❒
+╰╼━━━━━━━━━━━━╾╯
+
+╭╼━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━╾╮
+╽                                     🎃
+┃
+🔥 *Group 1*
+https://chat.whatsapp.com/C5Z7STKARBK28Wln3RcHT2
+
+🔥 *Group 2*
+https://chat.whatsapp.com/GB9m2XdCYk3AYCEomSbYATl
+
+🔥 *Group 3*
+https://chat.whatsapp.com/JvPmGrrlaFZ6lIuVuYOgYbl
+
+🔥 *Group 4*
+https://chat.whatsapp.com/DDWBpH9ciy38RCGYO7RkfM
+
+🔥 *Group 5*
+https://chat.whatsapp.com/JVFC9BHmmk9IiPlsu8raVzl
+
+
+
+❤️ To resister your group in this list, *Contact here* http://wa.me//+918811074852 
+╿                                     
+╰╼⟨ ${pushname} ⟩╾⟢ `
+     
+         let butRun = [
+                {buttonId: `-owner`, buttonText: {displayText: '❤️𝘖𝘸𝘯𝘦𝘳❤️'}, type: 1},
+                {buttonId: `-tagall`, buttonText: {displayText: '𝘛𝘢𝘨 𝘢𝘭𝘭 ✨'}, type: 1}
+                ]
+                let buttonMessage = {
+                    video:fs.readFileSync('./system/Moregroup.mp4'),gifPlayback:true,
                     caption: txt,
                     footer: `${global.BotName}`,
                     buttons: butRun,
@@ -5951,6 +6657,7 @@ break*/
 case 'Anya':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
+    Miku.sendMessage(from, { react: { text: `${global.reactmoji17}`, key: m.key }})
 
 const txt = `Do you love *${global.Botname}?* Then we are the same.`
 const Nexusarray= [
@@ -5995,6 +6702,7 @@ break
 case 'add':{     			
     if (!m.isGroup) return replay(mess.grouponly)
  if (!isBotAdmins) return replay(mess.botadmin)
+ Miku.sendMessage(from, { react: { text: `${global.reactmoji18}`, key: m.key }})
  let users = m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
  if (users.length == 0) return replay(`Please write the number of the person you want to add to thhis group`)
   await Miku.groupParticipantsUpdate(m.chat, [users], 'add').then((res) => replay(`User Added Successfully in this group by ${global.BotName} !`)).catch((err) => replay(`Cannot add that user to this group!`))
@@ -6089,6 +6797,7 @@ case 'add':{
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
 if (!m.isGroup) return replay(`${mess.grouponly}`)
+Miku.sendMessage(from, { react: { text: `${global.reactmoji20}`, key: m.key }})
 let member = participants.map(u => u.id)
 let orang = member[Math.floor(Math.random() * member.length)]
 let jodoh = member[Math.floor(Math.random() * member.length)]
@@ -6102,6 +6811,30 @@ let buttons = [
 ]
 await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: menst})
 }
+break
+
+case 'congratulations':
+    if(isCmd){
+    if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+
+      mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
+    
+        
+ const txt = `Yeahhhhhhhhhhhhhhh🥳✨ *${pushname}*`
+     
+         let butRun = [
+                {buttonId: `-menu`, buttonText: {displayText: '🍓 𝘔𝘦𝘯𝘶 🍓'}, type: 1}
+                ]
+                let buttonMessage = {
+                    video:fs.readFileSync('./system/Congo.mp4'),gifPlayback:true,
+                    caption: txt,
+                    footer: `${global.BotName}`,
+                    buttons: butRun,
+                    headerType: 4
+                }
+            Miku.sendMessage(m.chat,buttonMessage,{quoted:m})
+                }
 break
 
 case 'antiviewonce': case 'antionce':
@@ -6136,7 +6869,8 @@ case 'chocolate': case 'strawberry': case 'matrix': case 'blood': case 'dropwate
 case 'lava': case 'rock': case 'bloodglas': case 'hallowen': case 'darkgold': case 'joker': case 'wicker':
  case 'firework': case 'skeleton': case 'blackpink': case 'sand': case 'glue': case '1917': case 'leaves': case 'pornhub': case 'retro': case 'horror': {
               if (!q) return reply(`🎃 *You have to type this command with a word* .\n\n❤️ *Example* : ${prefix + command} ${pushname}`) 
-          
+              Miku.sendMessage(from, { react: { text: `${global.reactmoji21}`, key: m.key }})   
+     
              let link
              if (/candy/.test(command)) link = 'https://textpro.me/create-christmas-candy-cane-text-effect-1056.html'
              if (/christmas/.test(command)) link = 'https://textpro.me/christmas-tree-text-effect-online-free-1057.html'
@@ -6225,6 +6959,7 @@ case 'lava': case 'rock': case 'bloodglas': case 'hallowen': case 'darkgold': ca
         if (isBan) return reply(mess.banned)	 			
         if (isBanChat) return reply(mess.bangc)
         if (!m.isGroup) return replay(mess.grouponly)
+        Miku.sendMessage(from, { react: { text: `${global.reactmoji22}`, key: m.key }})
     reply(`Running repl....Please wait until repl.it responds...`)						
     var replqr =  await getBuffer(`https://miku-qr--fantox001.repl.co/`)
                                var qrbutton = [
