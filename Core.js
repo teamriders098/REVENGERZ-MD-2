@@ -1879,8 +1879,8 @@ if (isBanChat) return reply(mess.banChat)
   break
 
                 case 'help': case 'menu':{
-                	   if (isBanned) return reply(mess.banned)
-	if (isBangc) return reply(mess.bangc)
+                	   if (isBa) return reply(mess.banned)
+	if (isBanChat) return reply(mess.bangc)
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
                     title: `Aww my darling ${pushname} you need help? 🥺❤️`,
