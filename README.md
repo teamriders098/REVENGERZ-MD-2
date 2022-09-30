@@ -159,7 +159,7 @@ npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 ## ✧ Credits and Appreciation:
 𝗖𝗿𝗲𝗱𝗶𝘁𝘀 𝘁𝗼-
 Pikachu - (https://github.com/Pika4O4)
-Nexus - (https://github.com/nexus)
+Nexus - (https://github.com/NEXUSAT12)
 
 
 
