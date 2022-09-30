@@ -7,7 +7,7 @@
 <h1 align="center"> Anya by Pika❤️
 </h1>
 <p align="center"> 
-  Hello Darling ✨, I am "Anya" a WhatsApp bot made by Pika to do everything that is possible on WhatsApp based on WhatsApp Multi Device(MD) Support.
+  Hello Darling ✨, I am "Anya" a WhatsApp bot made by 𝗫𝘁𝗲𝗮𝗺 to do everything that is possible on WhatsApp based on WhatsApp Multi Device(MD) Support.
 
 <p align="center">
   <a href="https://github.com/Pika4O4/Anya-pika/fork">
@@ -19,22 +19,22 @@
   </a>
 
 <p align="center">
-  <a href="https://github.com/FantoX001/Miku-MD">
-    <img src="https://visitor-badge.glitch.me/badge?page_id=https://github.com/FantoX001/Miku-MD.visitor-badge&left_text=Total%20Repo%20Visits">
+  <a href="https://github.com/Pika4O4/Anya-pika">
+    <img src="https://visitor-badge.glitch.me/badge?page_id=https://github.com/Pika4O4/Anya.visitor-badge&left_text=Total%20Repo%20Visits">
     
     
-<a href="https://github.com/FantoX001">
-    <img src="(https://visitor-badge.glitch.me/badge?page_id=https://github.com/FantoX001/Shikimori-MD.visitor-badge&left_text=Total%20Repo%20Visitors)">
+<a href="https://github.com/Pika4O4">
+    <img src="(https://visitor-badge.glitch.me/badge?page_id=https://github.com/Pika4O4/Shikimori-MD.visitor-badge&left_text=Total%20Repo%20Visitors)">
   </a>
 </br>
       
 </br> 
    
-#### ✧✧ This bot is still under development so if you want to recode/modify it, pls check this main repo once in 2 days because i am continuously debugging it and making major changes in it.
-</br>
+
+
   
 
-## ✧✧✧ Why use Miku as your Base?
+## ✧✧✧ Why use Anya as your Base?
 
 ```
 1. Copyright Free.
@@ -50,15 +50,12 @@
 ✧ The main motto of this project is to provide Beginner Devs a base without any limitations 😊.
 ✧ Check "Credits" section and Support Them too.
 
--regards FantoX001
+-regards Pika4O4
 ```
 </br>
 
-## ✧✧✧ Video tutorial for Heroku Deploy:
 
-<a href="https://youtu.be/fZdM7Ahb4JE"><img src="https://i.ibb.co/71mYRh4/116-1161192-podcast-subscribe-listen-button-youtube-sign-hd-png.png" alt="Watch tutorial on YouTube" border="0"  width="160"></a>
 
-Here's the Video Tuturial for Deploying and Hosting Miku Bot on Heroku.
 
 ## ✧✧✧ Heroku Deployment Method:
 
@@ -96,7 +93,7 @@ heroku/nodejs
 
 ## ✧✧✧ Join My Whatsapp Group for Support
 
-<a href="https://chat.whatsapp.com/JcBzjRIxM5UHfuJbt0KrWt"><img src="https://img.shields.io/badge/Join Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
+<a href="https://chat.whatsapp.com/DDWBpH9ciy38RCGYO7RkfM"><img src="https://img.shields.io/badge/Join Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 </a>
 
 ## ✧✧✧ CMD Deployment Method
@@ -128,23 +125,18 @@ pkg install nodejs -y
 pkg install ffmpeg -y 
 pkg install wget
 pkg install imagemagick -y
-git clone https://github.com/FantoX001/Miku-MD
-cd Miku-MD
+git clone https://github.com/Pika4O4/Anya-pika
+cd Anya-pika
 npm i
 npm start
 ```
 
-## ✧✧✧ To keep Miku alive without internet 24/7
+## ✧✧✧ To keep Anya alive without internet 24/7
 
 ```
 npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 ```
 
-## ✧✧✧ License and recode Permission:
-- Well, it's the most asked question !
-- And the answer is `"Permission is hereby granted for 100% modification/recode."`
-- And this project comes under [`MIT`](https://github.com/FantoX001/Miku-MD/blob/main/LICENSE.md) lincense.
-- Please at least [`Follow`](https://github.com/FantoX001/#follow) me on GitHub to show some appreciation.
    
    
 ## ✧ Reminder:
@@ -155,18 +147,19 @@ npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 
 
 ## ✧ Contribution:
-- I don't have any contributor in this project. Feel free to contribute.
+- contributer names and accounts are given below in credit section.
 
 
 
 ## ✧ Help Me:
-- [`Follow`](https://github.com/FantoX001/#follow) me on GitHub to make me feel motivated.
+- [`Follow`](https://github.com/Pika4O4/#follow) me on GitHub to make me feel motivated.
 - Give my project a ⭐ if you liked it.
 
      
 ## ✧ Credits and Appreciation:
+𝗖𝗿𝗲𝗱𝗶𝘁𝘀 𝘁𝗼-
+Pikachu - (https://github.com/Pika4O4)
+Nexus - (https://github.com/nexus)
 
--   `Adiwajshing` sir for [Baileys](https://github.com/adiwajshing/baileys).
--   `Arus~Bots`, my lovely team mates for [Mizuhara](https://github.com/Arus-Bots/Mizuhara) and Support.
--   `Xeon` for [Cheems](https://github.com/DGXeon/CheemsBot-MD2) as a Base.
--   `Zhwzein` for [Killua](https://github.com/zhwzein/Killua-Zoldyck)
+
+
