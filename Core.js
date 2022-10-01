@@ -4143,13 +4143,11 @@ await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: 
 break
 
 case 'test': case 'test2': {
-    if (isBan) return reply(mess.banned)
-    if (isBanChat) return reply(mess.bangc)
 let buttons = [
 {buttonId: `-congratulations`, buttonText: { displayText: '❤️ Congratulations ❤️' }, type: 1 },
 {buttonId: `-me`, buttonText: {displayText: 'My profile 🥵'}, type: 1}
 ]
-await Miku.sendButtonText(m.chat, buttons)
+await Miku.sendButtonText(buttons)
 }
 break
 
