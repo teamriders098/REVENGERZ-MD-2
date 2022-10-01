@@ -4142,6 +4142,17 @@ await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: 
 }
 break
 
+case 'test': case 'test2': {
+    if (isBan) return reply(mess.banned)
+    if (isBanChat) return reply(mess.bangc)
+let buttons = [
+{buttonId: `-congratulations`, buttonText: { displayText: '❤️ Congratulations ❤️' }, type: 1 },
+{buttonId: `-me`, buttonText: {displayText: 'My profile 🥵'}, type: 1}
+]
+await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: menst})
+}
+break
+
 case 'soulmate': {
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
@@ -6463,31 +6474,6 @@ case 'reactionmenu2':
                 ]
                 let buttonMessage = {
                     video:fs.readFileSync('./system/Reaction.mp4'),gifPlayback:true,
-                    caption: txt,
-                    footer: `${global.BotName}`,
-                    buttons: butRun,
-                    headerType: 4
-                }
-            Miku.sendMessage(m.chat,buttonMessage,{quoted:m})
-                }
-break
-
-case 'test':
-    if(isCmd){
-    if (isBan) return reply(mess.banned)	 			
-    if (isBanChat) return reply(mess.bangc)
-
-      mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
-    
-        
- const txt = ` `
-     
-         let butRun = [
-                {buttonId: `-owner`, buttonText: {displayText: '❤️ 𝘖𝘸𝘯𝘦𝘳 ❤️'}, type: 1},
-                {buttonId: `-funmenu`, buttonText: {displayText: 'Fun menu 😂'}, type: 1},      
-                {buttonId: `-menu`, buttonText: {displayText: '🍓 𝘔𝘦𝘯𝘶 🍓'}, type: 1}
-                ]
-                let buttonMessage = {              
                     caption: txt,
                     footer: `${global.BotName}`,
                     buttons: butRun,
