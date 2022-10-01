@@ -1881,7 +1881,6 @@ if (isBanChat) return reply(mess.banChat)
                 case 'help': case 'menu':{
                 	   if (isBan) return reply(mess.banned)
 	if (isBanChat) return reply(mess.bangc)
-        if (!text) return replay(`Tag Someone, Example : ${prefix + command} @Pika`)
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
                     title: `Aww my darling ${pushname} you need help? 🥺❤️`,
@@ -5650,7 +5649,7 @@ case 'allmenu': case 'm':{
  Powered by : *Pika❤️*
  Using by       : *${pushname}*`    
 
- let buttonshelpm = [{buttonId: `${prefix}owner`, buttonText: {displayText: `❤️𝘖𝘸𝘯𝘦𝘳❤️`}, type: 1},
+ let buttonshelpm = [{buttonId: `https://api.whatsapp.com/send?phone=+918811074852`, buttonText: {displayText: `❤️𝘖𝘸𝘯𝘦𝘳❤️`}, type: 1},
 		     {buttonId: `${prefix}tagall Hey everyone come online and use this cool bot🥀`, buttonText: {displayText: `𝘛𝘢𝘨 𝘢𝘭𝘭 ✨`}, type: 1},
                      {buttonId: `${prefix}groupsettings`, buttonText: {displayText: `𝘎𝘳𝘰𝘶𝘱 𝘴𝘦𝘵𝘵𝘪𝘯𝘨𝘴⚙️`}, type: 1}       	     
 		    ]
