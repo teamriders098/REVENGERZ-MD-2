@@ -2041,6 +2041,17 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
             }), {})
             Miku.relayMessage(m.chat, template.message, { messageId: template.key.id })
             }
+         let butRun = [
+                {buttonId: `-owner`, buttonText: {displayText: '❤️𝘖𝘸𝘯𝘦𝘳❤️'}, type: 1},
+                {buttonId: `-tagall`, buttonText: {displayText: '𝘛𝘢𝘨 𝘢𝘭𝘭 ✨'}, type: 1}
+                ]
+                let buttonMessage = {
+                    video:fs.readFileSync('./system/Antilink.mp4'),gifPlayback:true,
+                    caption: txt,
+                    footer: `${global.BotName}`,
+                    buttons: butRun,
+                    headerType: 4
+                }
             break
 
 /*
