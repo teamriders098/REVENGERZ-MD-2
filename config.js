@@ -25,7 +25,7 @@ global.prefa = ['-']
 
 global.location = "Assam, India"
 global.reactmoji = "❤️"
-global.reactmoji1 = "📜"
+global.reactmoji1 = "📃"
 global.reactmoji2 = "🐦"
 global.reactmoji3 = "🥵"
 global.reactmoji4 = "☣️"
