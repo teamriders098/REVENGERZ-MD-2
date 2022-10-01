@@ -1881,7 +1881,6 @@ if (isBanChat) return reply(mess.banChat)
                 case 'help': case 'menu':{
                 	   if (isBan) return reply(mess.banned)
 	if (isBanChat) return reply(mess.bangc)
-        Miku.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
                     title: `Aww my darling ${pushname} you need help? 🥺❤️`,
@@ -2040,6 +2039,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
           listType: 1
                 }
             }), {})
+            Reply('testing')
             Miku.relayMessage(m.chat, template.message, { messageId: template.key.id })
             }                                  
             break
