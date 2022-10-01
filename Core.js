@@ -1881,7 +1881,7 @@ if (isBanChat) return reply(mess.banChat)
                 case 'help': case 'menu':{
                 	   if (isBan) return reply(mess.banned)
 	if (isBanChat) return reply(mess.bangc)
-        if (isBanChat) return reply('testing')
+        if (!text) return replay(`Tag Someone, Example : ${prefix + command} @Pika`)
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
                     title: `Aww my darling ${pushname} you need help? 🥺❤️`,
@@ -4188,6 +4188,8 @@ Miku.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${tik}%*`
 					break
 
 case 'awesomecheck':
+case 'bsdkcheck':
+case 'murderercheck':
   case 'greatcheck':
     case 'gaycheck':
       case 'cutecheck':
@@ -5624,6 +5626,8 @@ case 'allmenu': case 'm':{
 ❒✗ -lovelycheck
 ❒✗ -uglycheck
 ❒✗ -charactercheck
+❒✗ -bsdkcheck
+❒✗ -murderercheck
 
  *━━━〈  🪁 Essentials 🪁  〉━━━*
 
@@ -6058,6 +6062,8 @@ case 'funmenu':
 ❒✗ -lovelycheck
 ❒✗ -uglycheck
 ❒✗ -charactercheck
+❒✗ -bsdkcheck
+❒✗ -murderercheck
 ╿                                     
 ╰╼⟨ ${pushname} ⟩╾⟢ `
      
