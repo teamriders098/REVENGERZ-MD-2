@@ -5694,7 +5694,7 @@ case 'allmenu': case 'm':{
  Powered by : *Pika❤️*
  Using by       : *${pushname}*`    
 
- let btn = [{
+ let buttonshelpm = [{
                                 urlButton: {
                                     displayText: 'YouTube 🍒',
                                     url: `https://github.com/Pika4O4/Anya-pika/edit/main/Core.js`
