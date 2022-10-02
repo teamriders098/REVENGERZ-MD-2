@@ -5694,16 +5694,16 @@ case 'allmenu': case 'm':{
  Powered by : *Pika❤️*
  Using by       : *${pushname}*`    
 
- let txt = [
-            { quickReplyButton: { displayText: `All Menu 🍱`, id: 'allmenu'} },
-            { quickReplyButton: { displayText: `List Menu 🍢`, id: 'command'} },
-            { quickReplyButton: { displayText: `Owner 🤣`, id: 'owner'} }
-        	]
+ let needhelpm = [
+                {buttonId: `-owner`, buttonText: {displayText: '❤️ 𝘖𝘸𝘯𝘦𝘳 ❤️'}, type: 1},
+                {buttonId: `-tagall`, buttonText: {displayText: '𝘛𝘢𝘨𝘢𝘭𝘭 ✨'}, type: 1},      
+                {buttonId: `-groupsettings`, buttonText: {displayText: '𝘎𝘳𝘰𝘶𝘱 𝘴𝘦𝘵𝘵𝘪𝘯𝘨𝘴⚙️'}, type: 1}
+                ]
                 let buttonMessage = {
                     video:fs.readFileSync('./system/miku2.mp4'),gifPlayback:true,
                     caption: txt,
                     footer: `${BotName}`,
-                    buttons: txt,
+                    buttons: needhelpm,
                     headerType: 4
                     
                 }
