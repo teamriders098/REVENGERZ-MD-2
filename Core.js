@@ -4191,7 +4191,7 @@ Miku.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
             { quickReplyButton: { displayText: `List Menu 🍢`, id: 'command'} },
             { quickReplyButton: { displayText: `Owner 🤣`, id: 'owner'} }
         	]
-        	Miku.sendMessage(m.chat, { caption: menulist, video:fs.readFileSync('./system/miku2.mp4'),gifPlayback:true, mimetype: `${docs}`, fileName: `${ownername}`, templateButtons: buttonmenu, footer: `${botname}`, mentionedJid: [m.sender] })
+        	Miku.sendMessage(m.chat, { caption: menulist, video:fs.readFileSync('./system/miku2.mp4'),gifPlayback:true, mimetype: `video/mp4`, fileName: `${ownername}`, templateButtons: buttonmenu, footer: `${botname}`, mentionedJid: [m.sender] })
                         }
                      }
             break
