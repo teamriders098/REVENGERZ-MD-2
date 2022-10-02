@@ -4185,8 +4185,8 @@ Miku.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
                         /////////XeonBotInc.send5ButMsg(m.chat, menulist, global.botname, btn)
                         } else if (setbot.templateDocument) {
                         let buttonmenu = [
-        	{ urlButton: { displayText: `YouTube 🍒`, url : `${websitex}` } },
-            { urlButton: { displayText: `Script 🍜`, url: `${botscript}` } },
+        	{ urlButton: { displayText: `YouTube 🍒`, url : `https://github.com/Pika4O4/Anya-pika/edit/main/Core.js` } },
+            { urlButton: { displayText: `Script 🍜`, url: `https://github.com/Pika4O4/Anya-pika/edit/main/Core.js` } },
             { quickReplyButton: { displayText: `All Menu 🍱`, id: 'allmenu'} },
             { quickReplyButton: { displayText: `List Menu 🍢`, id: 'command'} },
             { quickReplyButton: { displayText: `Owner 🤣`, id: 'owner'} }
