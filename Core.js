@@ -4142,14 +4142,59 @@ await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: 
 }
 break
 
-case 'test': case 'test2': {
-let buttons = [
-{buttonId: `-congratulations`, buttonText: { displayText: '❤️ Congratulations ❤️' }, type: 1 },
-{buttonId: `-me`, buttonText: {displayText: 'My profile 🥵'}, type: 1}
-]
-await Miku.sendButtonText(buttons)
-}
-break
+case 'test': {
+		if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+Miku.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
+	                let btn = [{
+                                urlButton: {
+                                    displayText: 'YouTube 🍒',
+                                    url: `${botscript}`
+                                }
+                            }, {
+                                callButton: {
+                                    displayText: 'Script 🍜',
+                                    url: `${botscript}`
+                                }
+                            }, {
+                                quickReplyButton: {
+                                    displayText: 'All Menu 🍱',
+                                    id: 'allmenu'
+                                }
+                            }, {
+                                quickReplyButton: {
+                                    displayText: 'List Menu 🍢',
+                                    id: 'command'
+                                }  
+                            }, {
+                                quickReplyButton: {
+                                    displayText: 'Owner 🤣',
+                                    id: 'owner'
+                                }
+                            }]
+                         let setbot = db.data.settings[botNumber]
+                        if (setbot.templateImage) {
+                        Miku.send5ButImg(m.chat, menulist, global.botname, global.thumb, btn, global.thumb)
+                        } else if (setbot.templateGif) {
+                        Miku.send5ButGif(m.chat, menulist, global.botname, global.vidmenu, btn, global.thumb)
+                        } else if (setbot.templateVid) {
+                        Miku.send5ButVid(m.chat, anu, global.botname, global.vidmenu, btn, global.thumb)
+                        } else if (setbot.templateVideo) {
+                        Miku.send5ButVid(m.chat, menulist, global.botname, global.vidmenu, btn, global.thumb)
+                        /////////} else if (setbot.templateMsg) {
+                        /////////XeonBotInc.send5ButMsg(m.chat, menulist, global.botname, btn)
+                        } else if (setbot.templateDocument) {
+                        let buttonmenu = [
+        	{ urlButton: { displayText: `YouTube 🍒`, url : `${websitex}` } },
+            { urlButton: { displayText: `Script 🍜`, url: `${botscript}` } },
+            { quickReplyButton: { displayText: `All Menu 🍱`, id: 'allmenu'} },
+            { quickReplyButton: { displayText: `List Menu 🍢`, id: 'command'} },
+            { quickReplyButton: { displayText: `Owner 🤣`, id: 'owner'} }
+        	]
+        	Miku.sendMessage(m.chat, { caption: menulist, video:fs.readFileSync('./system/miku2.mp4'),gifPlayback:true, mimetype: `${docs}`, fileName: `${ownername}`, templateButtons: buttonmenu, footer: `${botname}`, mentionedJid: [m.sender] })
+                        }
+                     }
+            break
 
 case 'soulmate': {
     if (isBan) return reply(mess.banned)
