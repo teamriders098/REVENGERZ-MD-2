@@ -5694,35 +5694,16 @@ case 'allmenu': case 'm':{
  Powered by : *Pika❤️*
  Using by       : *${pushname}*`    
 
- let buttonshelpm = [{
-                                urlButton: {
-                                    displayText: 'YouTube 🍒',
-                                    url: `https://github.com/Pika4O4/Anya-pika/edit/main/Core.js`
-                                }
-                            }, {
-                                callButton: {
-                                    displayText: 'Script 🍜',
-                                    url: `https://github.com/Pika4O4/Anya-pika/edit/main/Core.js`
-                                }
-                            }, {
-                                quickReplyButton: {
-                                    displayText: 'All Menu 🍱',
-                                    id: '-allmenu'
-                                }
-                            }, {
-                                quickReplyButton: {
-                                    displayText: 'List Menu 🍢',
-                                    id: '-command'
-                                }  
-                            }, {
-                                quickReplyButton: {
-                                    displayText: 'Owner 🤣',
-                                    id: '-owner'
-                                }
-                            }]
+ let txt = [
+        	{ urlButton: { displayText: `YouTube 🍒`, url : `https://github.com/Pika4O4/Anya-pika/edit/main/Core.js` } },
+            { urlButton: { displayText: `Script 🍜`, url: `https://github.com/Pika4O4/Anya-pika/edit/main/Core.js` } },
+            { quickReplyButton: { displayText: `All Menu 🍱`, id: 'allmenu'} },
+            { quickReplyButton: { displayText: `List Menu 🍢`, id: 'command'} },
+            { quickReplyButton: { displayText: `Owner 🤣`, id: 'owner'} }
+        	]
                 let buttonMessage = {
                     video:fs.readFileSync('./system/miku2.mp4'),gifPlayback:true,
-                    caption: helpmenu,
+                    caption: txt,
                     footer: `${BotName}`,
                     buttons: buttonshelpm,
                     headerType: 4
