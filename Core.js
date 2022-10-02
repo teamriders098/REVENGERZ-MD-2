@@ -5705,7 +5705,7 @@ case 'allmenu': case 'm':{
                     video:fs.readFileSync('./system/miku2.mp4'),gifPlayback:true,
                     caption: txt,
                     footer: `${BotName}`,
-                    buttons: buttonshelpm,
+                    buttons: txt,
                     headerType: 4
                     
                 }
