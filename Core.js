@@ -4149,12 +4149,12 @@ Miku.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 	                let btn = [{
                                 urlButton: {
                                     displayText: 'YouTube 🍒',
-                                    url: `${botscript}`
+                                    url: `https://github.com/Pika4O4/Anya-pika/edit/main/Core.js`
                                 }
                             }, {
                                 callButton: {
                                     displayText: 'Script 🍜',
-                                    url: `${botscript}`
+                                    url: `https://github.com/Pika4O4/Anya-pika/edit/main/Core.js`
                                 }
                             }, {
                                 quickReplyButton: {
