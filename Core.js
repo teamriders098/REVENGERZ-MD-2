@@ -5694,10 +5694,32 @@ case 'allmenu': case 'm':{
  Powered by : *Pika❤️*
  Using by       : *${pushname}*`    
 
- let buttonshelpm = [{buttonId: `-owner`, buttonText: {displayText: `❤️𝘖𝘸𝘯𝘦𝘳❤️`}, type: 1},
-		     {buttonId: `${prefix}tagall Hey everyone come online and use this cool bot🥀`, buttonText: {displayText: `𝘛𝘢𝘨 𝘢𝘭𝘭 ✨`}, type: 1},
-                     {buttonId: `${prefix}groupsettings`, buttonText: {displayText: `𝘎𝘳𝘰𝘶𝘱 𝘴𝘦𝘵𝘵𝘪𝘯𝘨𝘴⚙️`}, type: 1}       	     
-		    ]
+ let btn = [{
+                                urlButton: {
+                                    displayText: 'YouTube 🍒',
+                                    url: `https://github.com/Pika4O4/Anya-pika/edit/main/Core.js`
+                                }
+                            }, {
+                                callButton: {
+                                    displayText: 'Script 🍜',
+                                    url: `https://github.com/Pika4O4/Anya-pika/edit/main/Core.js`
+                                }
+                            }, {
+                                quickReplyButton: {
+                                    displayText: 'All Menu 🍱',
+                                    id: '-allmenu'
+                                }
+                            }, {
+                                quickReplyButton: {
+                                    displayText: 'List Menu 🍢',
+                                    id: '-command'
+                                }  
+                            }, {
+                                quickReplyButton: {
+                                    displayText: 'Owner 🤣',
+                                    id: '-owner'
+                                }
+                            }]
                 let buttonMessage = {
                     video:fs.readFileSync('./system/miku2.mp4'),gifPlayback:true,
                     caption: helpmenu,
