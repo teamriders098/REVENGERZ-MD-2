@@ -5694,16 +5694,15 @@ case 'allmenu': case 'm':{
  Powered by : *Pika❤️*
  Using by       : *${pushname}*`    
 
- let needhelpm = [
-                {buttonId: `-owner`, buttonText: {displayText: '❤️ 𝘖𝘸𝘯𝘦𝘳 ❤️'}, type: 1},
-                {buttonId: `-tagall`, buttonText: {displayText: '𝘛𝘢𝘨𝘢𝘭𝘭 ✨'}, type: 1},      
-                {buttonId: `-groupsettings`, buttonText: {displayText: '𝘎𝘳𝘰𝘶𝘱 𝘴𝘦𝘵𝘵𝘪𝘯𝘨𝘴⚙️'}, type: 1}
-                ]
+let buttonshelpm = [{buttonId: `${prefix}owner`, buttonText: {displayText: `❤️𝘖𝘸𝘯𝘦𝘳❤️`}, type: 1},
+		     {buttonId: `${prefix}tagall Hey everyone come online and use this cool bot🥀`, buttonText: {displayText: `𝘛𝘢𝘨 𝘢𝘭𝘭 ✨`}, type: 1},
+                     {buttonId: `${prefix}groupsettings`, buttonText: {displayText: `𝘎𝘳𝘰𝘶𝘱 𝘴𝘦𝘵𝘵𝘪𝘯𝘨𝘴⚙️`}, type: 1}       	     
+		    ]
                 let buttonMessage = {
                     video:fs.readFileSync('./system/miku2.mp4'),gifPlayback:true,
-                    caption: txt,
+                    caption: helpmenu,
                     footer: `${BotName}`,
-                    buttons: needhelpm,
+                    buttons: buttonshelpm,
                     headerType: 4
                     
                 }
