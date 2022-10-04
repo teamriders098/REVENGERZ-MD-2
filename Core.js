@@ -4147,13 +4147,13 @@ case 'test': {
     if (isBanChat) return reply(mess.bangc)
 if (!m.isGroup) return replay(`${mess.grouponly}`)
 let member = participants.map(u => u.id)
-let jawab = `Ohh i see 👀💖...`
-let buttons = [
-{buttonId: `-congratulations`, buttonText: { displayText: '❤️ Congratulations ❤️' }, type: 1 },
-{buttonId: `-me`, buttonText: {displayText: 'My profile 🥵'}, type: 1}
-]
-await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m)
-}
+let jawab = `ㅤ`
+let butRun = [
+                {buttonId: `-listmenu`, buttonText: {displayText: '❤️𝘖𝘸𝘯𝘦𝘳❤️'}, type: 1},
+                {buttonId: `-allmenu`, buttonText: {displayText: '𝘛𝘢𝘨 𝘢𝘭𝘭 ✨'}, type: 1}
+                ]
+                await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m)
+                }
 break
 
 case 'soulmate': {
