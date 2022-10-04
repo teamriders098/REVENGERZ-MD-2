@@ -4142,60 +4142,6 @@ await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: 
 }
 break
 
-case 'test': {
-		if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-Miku.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
-	                let btn = [{
-                                urlButton: {
-                                    displayText: 'YouTube 🍒',
-                                    url: `https://github.com/Pika4O4/Anya-pika/edit/main/Core.js`
-                                }
-                            }, {
-                                callButton: {
-                                    displayText: 'Script 🍜',
-                                    url: `https://github.com/Pika4O4/Anya-pika/edit/main/Core.js`
-                                }
-                            }, {
-                                quickReplyButton: {
-                                    displayText: 'All Menu 🍱',
-                                    id: '-allmenu'
-                                }
-                            }, {
-                                quickReplyButton: {
-                                    displayText: 'List Menu 🍢',
-                                    id: '-command'
-                                }  
-                            }, {
-                                quickReplyButton: {
-                                    displayText: 'Owner 🤣',
-                                    id: '-owner'
-                                }
-                            }]
-                         let setbot = db.data.settings[botNumber]
-                        if (setbot.templateImage) {
-                        Miku.send5ButImg(m.chat, menulist, global.botname, global.thumb, btn, global.thumb)
-                        } else if (setbot.templateGif) {
-                        Miku.send5ButGif(m.chat, menulist, global.botname, global.vidmenu, btn, global.thumb)
-                        } else if (setbot.templateVid) {
-                        Miku.send5ButVid(m.chat, anu, global.botname, global.vidmenu, btn, global.thumb)
-                        } else if (setbot.templateVideo) {
-                        Miku.send5ButVid(m.chat, menulist, global.botname, global.vidmenu, btn, global.thumb)
-                        /////////} else if (setbot.templateMsg) {
-                        /////////XeonBotInc.send5ButMsg(m.chat, menulist, global.botname, btn)
-                        } else if (setbot.templateDocument) {
-                        let buttonmenu = [
-        	{ urlButton: { displayText: `YouTube 🍒`, url : `https://github.com/Pika4O4/Anya-pika/edit/main/Core.js` } },
-            { urlButton: { displayText: `Script 🍜`, url: `https://github.com/Pika4O4/Anya-pika/edit/main/Core.js` } },
-            { quickReplyButton: { displayText: `All Menu 🍱`, id: 'allmenu'} },
-            { quickReplyButton: { displayText: `List Menu 🍢`, id: 'command'} },
-            { quickReplyButton: { displayText: `Owner 🤣`, id: 'owner'} }
-        	]
-        	Miku.sendMessage(m.chat, { caption: menulist, video:fs.readFileSync('./system/miku2.mp4'),gifPlayback:true, mimetype: `video/mp4`, fileName: `${global.ownername}`, templateButtons: buttonmenu, footer: `${global.botname}`, mentionedJid: [m.sender] })
-                        }
-                     }
-            break
-
 case 'soulmate': {
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
@@ -6738,6 +6684,88 @@ const Nexusarray= [
 
 break
 
+            case 'lockcmd': case 'lockcommand':{
+            	if (isBan) return reply(mess.ban)
+	if (isBanChat) return reply(mess.banChat)
+                if (!isCreator) return replay(`${mess.owner}`)
+                if (!m.quoted) return reply(`Reply Message!`)
+                if (!m.quoted.fileSha256) return reply(`SHA256 Hash Missing`)
+                let hash = m.quoted.fileSha256.toString('base64')
+                if (!(hash in global.db.data.sticker)) return reply(`Hash Not Found In Database`)
+                global.db.data.sticker[hash].locked = !/^un/i.test(command)
+                reply('Done!')
+            }
+            break
+
+  case 'setmenu': {
+            	if (isBan) return reply(mess.ban)
+	if (isBanChat) return reply(mess.banChat)
+            if (!isCreator) return reply(mess.owner)
+            let setbot = db.data.settings[botNumber]
+               if (args[0] === 'templateImage'){
+                setbot.templateImage = true
+                setbot.templateVideo = false
+                setbot.templateGif = false
+                setbot.templateMsg = false
+                setbot.templateDocument = false
+                reply(mess.success)
+                } else if (args[0] === 'templateVideo'){
+                setbot.templateImage = false
+                setbot.templateVideo = true
+                setbot.templateGif = false
+                setbot.templateMsg = false
+                setbot.templateLocation = false
+                reply(mess.success)
+                } else if (args[0] === 'templateGif'){
+                setbot.templateImage = false
+                setbot.templateVideo = false
+                setbot.templateGif = true
+                setbot.templateMsg = false
+                setbot.templateDocument = false
+                reply(mess.success)
+                //} else if (args[0] === 'templateMessage'){
+                /////setbot.templateImage = false
+                /////setbot.templateVideo = false
+                /////setbot.templateGif = false
+                /////setbot.templateMsg = true
+                //////setbot.templateDocument = false
+                //////reply(mess.success)
+                } else if (args[0] === 'templateDocument'){
+                setbot.templateImage = false
+                setbot.templateVideo = false
+                setbot.templateGif = false
+                setbot.templateMsg = false
+                setbot.templateDocument = true
+                reply(mess.success)
+                } else {
+                let sections = [
+                {
+                title: "😛CHANGE BOT MENU😛",
+                rows: [
+                {title: "Image Menu", rowId: `setmenu templateImage`, description: `Tap to change bot menu to Image Menu`},
+                {title: "Gif Menu", rowId: `setmenu templateGif`, description: `Tap to change bot menu to Gif Menu`},
+                {title: "Video Menu", rowId: `setmenu templateVideo`, description: `Tap to change bot menu to Video Menu`},
+                ///////////////{title: "Text Menu", rowId: `setmenu templateMessage`, description: `Tap to change bot menu to Text Menu`},
+                {title: "Document Menu", rowId: `setmenu templateDocument`, description: `Tap to change bot menu to Document Menu`}
+                ]
+                },
+                ]
+                Miku.sendListMsg(m.chat, `Please select the menu you want to change!`, ` `, Miku.user.name, `Click Here`, sections, m)
+                }
+            }
+            break
+
+case 'listonline': case 'listaktif': {
+   if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+if (!m.isGroup) return replay(mess.group)
+let id = args && /\d+\-\d+@g.us/.test(args[0]) ? args[0] : m.chat
+let online = [...Object.keys(store.presences[id]), botNumber]
+let liston = 1
+Miku.sendText(m.chat, '     「 Online List 」\n\n' + online.map(v => `${liston++} . @` + v.replace(/@.+/, '')).join`\n`, m, { mentions: online })
+}
+break
+
 case 'checknumber':
   reply(mess.wait)
   const dripska = {
@@ -7038,7 +7066,29 @@ case 'lava': case 'rock': case 'bloodglas': case 'hallowen': case 'darkgold': ca
                     })
     break
 
+case 'test2':
+    if(isCmd){
+    if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
 
+      mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
+    
+        
+ const txt = `ㅤ`
+     
+         let butRun = [
+                {buttonId: `-owner`, buttonText: {displayText: '❤️ 𝘖𝘸𝘯𝘦𝘳 ❤️'}, type: 1},
+                {buttonId: `-funmenu`, buttonText: {displayText: 'Fun menu 😂'}, type: 1}
+                ]
+                let buttonMessage = {                    
+                    caption: txt,
+                    footer: `${global.BotName}`,
+                    buttons: butRun,
+                    headerType: 4
+                }
+            Miku.sendMessage(m.chat,buttonMessage,{quoted:m})
+                }
+break
 
 default:
 
