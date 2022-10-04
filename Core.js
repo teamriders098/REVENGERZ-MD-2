@@ -4152,7 +4152,7 @@ let buttons = [
 {buttonId: `-congratulations`, buttonText: { displayText: '❤️ Congratulations ❤️' }, type: 1 },
 {buttonId: `-me`, buttonText: {displayText: 'My profile 🥵'}, type: 1}
 ]
-await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: menst})
+await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m)
 }
 break
 
