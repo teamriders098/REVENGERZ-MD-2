@@ -47,9 +47,10 @@ global.reactmoji19 = "⚠️"
 global.reactmoji20 = "💯"
 global.reactmoji21 = "💖"
 global.reactmoji22 = "✨"
+global.reactmoji23 = "🤖"
 global.themeemoji = "💖"
 global.vidmenu = { url: 'https://c.tenor.com/YGuLegQWubwAAAPo/miku-nakano-gotoubun-no-hanayome.mp4' }
-global.websitex = "https://github.com/FantoX001"
+global.websitex = "https://github.com/Pika4O4"
 global.lolhuman = "KaysaS"
 
 
