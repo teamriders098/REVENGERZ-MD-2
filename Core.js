@@ -4155,7 +4155,7 @@ let buttons = [
                 footer: `${BotName}`,
                 buttons: buttons,
                 headerType: 4
-                await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m)
+                Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m)
                 }
 break
 
