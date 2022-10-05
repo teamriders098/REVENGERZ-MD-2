@@ -2070,7 +2070,7 @@ if (args.length < 1) return reply('type auto sticker on to enable\ntype auto sti
 if (args[0]  === 'on'){
 if (isAutoSticker) return reply(`Already activated`)
 autosticker.push(from)
-fs.writeFileSync('./src/sticker.json', JSON.stringify(autosticker))
+fs.writeFileSync('./database/autosticker.json', JSON.stringify(autosticker))
 reply('autosticker activated')
 } else if (args[0] === 'off'){
 let anu = autosticker.indexOf(from)
