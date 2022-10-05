@@ -4142,23 +4142,6 @@ await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: 
 }
 break
 
-case 'test': {
-    if (isBan) return reply(mess.banned)
-    if (isBanChat) return reply(mess.bangc)
-let member = participants.map(u => u.id)
-let jawab = `ㅤ`
-let buttons = [
-                {buttonId: `-listmenu`, buttonText: {displayText: '❤️𝘖𝘸𝘯𝘦𝘳❤️'}, type: 1},
-                {buttonId: `-allmenu`, buttonText: {displayText: '𝘛𝘢𝘨 𝘢𝘭𝘭 ✨'}, type: 1}
-                ]
-            let buttonMessage = {
-                footer: `${BotName}`,
-                buttons: buttons,
-                headerType: 4
-                Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m)
-                }
-break
-
 case 'soulmate': {
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
