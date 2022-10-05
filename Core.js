@@ -1878,7 +1878,7 @@ if (isBanChat) return reply(mess.banChat)
 }
   break
 
-                case 'help': case 'menu':{
+                case 'listmenu': case 'list':{
                 	   if (isBan) return reply(mess.banned)
 	if (isBanChat) return reply(mess.bangc)
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -1937,6 +1937,11 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 										"title": "ᵃⁿʸᵃ⃟🥵 𝗢𝘄𝗻𝗲𝗿 𝗺𝗲𝗻𝘂",
 										"description": "Display the list of owner features",
 										"rowId": `${prefix}ownermenu`
+										},
+									{
+										"title": "ᵃⁿʸᵃ⃟🖤 𝗪𝗵𝗼 𝗮𝗿𝗲 𝗼𝗻𝗹𝗶𝗻𝗲 𝗵𝗲𝗿𝗲 ?",
+										"description": "Display the list of online members",
+										"rowId": `${prefix}listonline`
 										},
 									{
 										"title": "ᵃⁿʸᵃ⃟⚠️ 𝗔𝗻𝘁𝗶𝗹𝗶𝗻𝗸 𝗺𝗲𝗻𝘂",
@@ -4123,7 +4128,7 @@ var { kasus, kematian, sembuh } = c[0]
 Miku.sendMessage(from, {text : `Case : ${kasus}\n\nDead : ${kematian}\n\nHealed : ${sembuh}`}, m)
 break
 
-case 'test':
+case 'help': case 'menu': case 'commands': case 'command'
     if(isCmd){
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
@@ -4131,17 +4136,16 @@ case 'test':
       mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
     
         
- const txt = `.`
+ const txt = `🦋⃟≛⃝ 𝗔𝗻𝘆𝗮ᵇʸ ᵖⁱᵏᵃ•••`
      
          let butRun = [
-                {buttonId: `-owner`, buttonText: {displayText: '❤️ 𝘖𝘸𝘯𝘦𝘳 ❤️'}, type: 1},
-                {buttonId: `-funmenu`, buttonText: {displayText: 'Fun menu 😂'}, type: 1},      
-                {buttonId: `-menu`, buttonText: {displayText: '🍓 𝘔𝘦𝘯𝘶 🍓'}, type: 1}
+                {buttonId: `-listmenu`, buttonText: {displayText: '🥵 𝘓𝘪𝘴𝘵 𝘮𝘦𝘯𝘶'}, type: 1},                      
+                {buttonId: `-allmenu`, buttonText: {displayText: '𝘈𝘭𝘭 𝘮𝘦𝘯𝘶 🎃'}, type: 1}
                 ]
                 let buttonMessage = {
-                    Image:fs.readFileSync('./system/test.jpg'),
+                    video:fs.readFileSync('./system/Start.mp4'),gifPlayback:true,
                     caption: txt,
-                    footer: `${global.BotName}`,
+                    footer: `Choose your menu type here...⬇️`,
                     buttons: butRun,
                     headerType: 4
                 }
