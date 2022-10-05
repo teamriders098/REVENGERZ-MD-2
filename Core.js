@@ -3849,7 +3849,7 @@ reply("Error link!")
 }
 break
 
-case 'play': case 'song': case 'ytplay': {
+case'play': case 'song': case 'ytplay': {
 		if (isBan) return reply(mess.banned)	 			
  		if (isBanChat) return reply(mess.bangc)
                 if (!text) return reply(`Example : ${prefix + command} Stay`)
@@ -4132,11 +4132,12 @@ case 'help': case 'menu': case 'commands': case 'command':
     if (isCmd){
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
+    Miku.sendMessage(from, { react: { text: `${global.reactmoji23}`, key: m.key }})
 
       mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
     
         
- const txt = `🦋⃟≛⃝ 𝗔𝗻𝘆𝗮ᵇʸ ᵖⁱᵏᵃ•••`
+ const txt = `🦋⃟≛⃝ 𝗔𝗻𝘆𝗮ᵇʸ ᵖⁱᵏᵃ•••      ⬇️`
      
          let butRun = [
                 {buttonId: `-listmenu`, buttonText: {displayText: '🥵 𝘓𝘪𝘴𝘵 𝘮𝘦𝘯𝘶'}, type: 1},                      
@@ -4145,7 +4146,7 @@ case 'help': case 'menu': case 'commands': case 'command':
                 let buttonMessage = {
                     video:fs.readFileSync('./system/Start.mp4'),gifPlayback:true,
                     caption: txt,
-                    footer: `Choose your menu type here...⬇️`,
+                    footer: `Choose your menu type here....`,
                     buttons: butRun,
                     headerType: 4
                 }
