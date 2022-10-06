@@ -4128,6 +4128,13 @@ var { kasus, kematian, sembuh } = c[0]
 Miku.sendMessage(from, {text : `Case : ${kasus}\n\nDead : ${kematian}\n\nHealed : ${sembuh}`}, m)
 break
 
+case 'enjoyvro':
+    if (isBan) return reply(mess.banned)
+    if (isBanChat) return reply(mess.bangc)
+const c = await covid()
+Miku.sendMessage(from, {text : `working`}, m)
+break
+
 case 'help': case 'menu': case 'commands': case 'command':
     if (isCmd){
     if (isBan) return reply(mess.banned)	 			
@@ -7095,6 +7102,8 @@ case 'lava': case 'rock': case 'bloodglas': case 'hallowen': case 'darkgold': ca
                         return('Error!')
                     })
     break
+
+
 
 default:
 
