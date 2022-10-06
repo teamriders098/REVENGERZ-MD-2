@@ -4131,7 +4131,6 @@ break
 case 'enjoyvro':
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
-const c = await covid()
 Miku.sendMessage(from, {text : `working`}, m)
 break
 
