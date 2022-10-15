@@ -7,13 +7,13 @@ global.autoReadAll = false
 global.antitags = true
 
 
-global.Owner = ['918811074852']
-global.OwnerNumber = ['918811074852']
-global.ownertag = ['918811074852']
-global.BotName = "Anya❤️"
-global.packname = "Anya bot"
-global.author = "By: Pika❤️"
-global.OwnerName = "3.69_pika"
+global.Owner = ['918107768770']
+global.OwnerNumber = ['918107768770']
+global.ownertag = ['918107768770']
+global.BotName = "BHOSMANUS❤️"
+global.packname = "BHOSMANUS"
+global.author = "By: Goransh❤️"
+global.OwnerName = "Goransh"
 global.BotSourceCode = "*⚠️ This Bot is premium... means you have to buy this bot from the owner to own it ❤️*"
 global.SupportGroupLink = "https://chat.whatsapp.com/H6CUtq40oRDKIofIEbf1qEl"
 global.sessionName = "session"
